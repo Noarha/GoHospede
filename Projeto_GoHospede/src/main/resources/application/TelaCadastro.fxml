@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,13 +16,100 @@
             <Image url="@../imagens/ChatGPT%20Image%2031%20de%20ago.%20de%202026,%2019_05_49.png" />
          </image>
       </ImageView>
-      <Pane layoutX="500.0" layoutY="437.0" prefHeight="620.0" prefWidth="980.0" style="-fx-background-radius: 20; -fx-background-color: rgba(255,255,255,0.15); -fx-background-insets: 0; -fx-effect: dropsshadow(gaussian,one-pass-box,0,0.35,20,0); -fx-background-radius: 20; -fx-border-width: 1; -fx-border-color: gold; -fx-border-radius: 40;">
+      <Pane layoutX="496.0" layoutY="446.0" prefHeight="620.0" prefWidth="980.0" style="-fx-background-radius: 20; -fx-background-color: rgba(255,255,255,0.15); -fx-background-insets: 0; -fx-effect: dropsshadow(gaussian,one-pass-box,0,0.35,20,0); -fx-background-radius: 20; -fx-border-width: 1; -fx-border-color: gold; -fx-border-radius: 40;">
          <children>
             <Text fill="#152075" layoutX="329.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crie sua conta" wrappingWidth="353.1500244140625">
                <font>
                   <Font name="Dubai Medium" size="49.0" />
                </font>
             </Text>
+            <Pane layoutX="517.0" layoutY="148.0" prefHeight="62.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <TextField fx:id="txtsenha" layoutX="52.0" prefHeight="61.0" prefWidth="375.0" promptText="Senha" style="-fx-background-color: transparente;">
+                     <font>
+                        <Font name="Dubai Medium" size="24.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="48.0" fitWidth="60.0" layoutX="5.0" layoutY="9.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/64e3baa9-5599-43c6-898b-3ad74fe4be51.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="32.0" layoutY="223.0" prefHeight="61.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="47.0" layoutX="1.0" layoutY="12.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/ChatGPT%20Image%201%20de%20set.%20de%202026,%2019_46_15.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtEmail" layoutX="52.0" prefHeight="61.0" prefWidth="375.0" promptText="E-mail" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Dubai Medium" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane layoutX="33.0" layoutY="295.0" prefHeight="61.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="47.0" layoutX="2.0" layoutY="12.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/e7839508-d089-424b-aa0c-2391c18f02a9%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txttelefone" layoutX="52.0" prefHeight="62.0" prefWidth="375.0" promptText="Telefone" style="-fx-background-color: transparente;">
+                     <font>
+                        <Font name="Dubai Medium" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane layoutX="36.0" layoutY="367.0" prefHeight="61.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="3.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/ChatGPT%20Image%201%20de%20set.%20de%202026,%2019_50_23%20(3).png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtnascimento" layoutX="52.0" prefHeight="61.0" prefWidth="375.0" promptText="Data de Nascimento" style="-fx-background-color: transparente;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane layoutX="517.0" layoutY="220.0" prefHeight="61.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <TextField fx:id="txtconfirmarsenha" layoutX="52.0" prefHeight="61.0" prefWidth="375.0" promptText="Confirmar senha" style="-fx-background-color: transparente;">
+                     <font>
+                        <Font name="Dubai Medium" size="24.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="3.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/64e3baa9-5599-43c6-898b-3ad74fe4be51.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="30.0" layoutY="148.0" prefHeight="61.0" prefWidth="464.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="8.0" layoutY="11.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/ChatGPT%20Image%201%20de%20set.%20de%202026,%2019_43_32.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtnome" layoutX="40.0" prefHeight="61.0" prefWidth="418.0" promptText="Nome Completo" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Dubai Medium" size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </children>
+            </Pane>
          </children>
       </Pane>
       <Text fill="#152075" layoutX="594.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Junte-se ao GoHospede e tenha uma expência única em hospitalidade.">
