@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TelaControleCadastro">
+   <children>
+      <ImageView fx:id="Tela" fitHeight="1095.0" fitWidth="1924.0" layoutX="-4.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/ChatGPT%20Image%2028%20de%20ago.%20de%202026,%2019_25_53.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="cadastro" layoutX="1118.0" layoutY="137.0" prefHeight="858.0" prefWidth="660.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 30; -fx-border-radius: Shadow;">
+         <children>
+            <Text fx:id="bemvindo" fill="WHITE" layoutX="211.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-Vindo!" wrappingWidth="246.13671875">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+            <Text fx:id="acesse" fill="WHITE" layoutX="116.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acesse sua conta para continuar">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="email" fill="WHITE" layoutX="96.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="95.00634765625">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <TextField fx:id="emailescrever" layoutX="107.0" layoutY="234.0" prefHeight="67.0" prefWidth="499.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 10px;" />
+            <Text fx:id="senha" fill="WHITE" layoutX="96.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="179.503173828125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="senhaescrever" layoutX="108.0" layoutY="369.0" prefHeight="67.0" prefWidth="499.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-radius: 10px;" />
+            <TextField fx:id="senhaescrever2" layoutX="108.0" layoutY="369.0" prefHeight="67.0" prefWidth="499.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 10px;" />
+            <Text fx:id="login" fill="WHITE" layoutX="109.0" layoutY="837.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ainda não tem uma conta? ">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Hyperlink fx:id="cadastros" layoutX="406.0" layoutY="805.0" text="Cadastre-se" textFill="#d9a928">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="Entrarbotton" layoutX="108.0" layoutY="543.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="499.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient( to right, #e5c483,#cfa555,#ac7721);" text="Entrar">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="132.0" layoutY="668.0" strokeType="OUTSIDE" strokeWidth="0.0" text="__________ou continue com__________">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Hyperlink layoutX="364.0" layoutY="453.0" text="Esqueceu sua senha?" textFill="#ffb030">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Hyperlink>
+         </children>
+         <opaqueInsets>
+            <Insets top="5.0" />
+         </opaqueInsets>
+      </Pane>
+      <AnchorPane layoutX="-8.0" layoutY="-138.0" prefHeight="200.0" prefWidth="1926.0" style="-fx-background-color: black;">
+         <children>
+            <Hyperlink layoutX="444.0" layoutY="134.0" text="Início" textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink layoutX="608.0" layoutY="134.0" text="Sobre Nós" textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink layoutX="864.0" layoutY="128.0" text="Serviços" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink layoutX="1091.0" layoutY="128.0" text="Destinos" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink layoutX="1310.0" layoutY="128.0" text="Contato" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Hyperlink>
+            <TextField layoutX="1712.0" layoutY="147.0" prefHeight="47.0" prefWidth="201.0" style="-fx-background-color: #4a4a4a;" />
+            <Hyperlink layoutX="1707.0" layoutY="143.0" text="FAZER LOGIN" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="84.0" fitWidth="72.0" layoutX="1639.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/ChatGPT%20Image%2031_08_2026,%2019_44_35.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-4.0" layoutY="1000.0" prefHeight="82.0" prefWidth="1926.0" style="-fx-background-color: black;">
+         <children>
+            <Text fill="WHITE" layoutX="143.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservas Seguras">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text fill="#ebebeb" layoutX="154.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seus dados protegidos">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
