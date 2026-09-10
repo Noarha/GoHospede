@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,35 +14,35 @@
 
 <AnchorPane fx:id="Telalogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TelaControleCadastro">
    <children>
-      <ImageView fitHeight="1105.0" fitWidth="1942.0" layoutX="-6.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagem" fitHeight="1105.0" fitWidth="1942.0" layoutX="-6.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/ChatGPT%20Image%2031%20de%20ago.%20de%202026,%2019_05_49.png" />
          </image>
       </ImageView>
-      <Pane layoutX="496.0" layoutY="446.0" prefHeight="620.0" prefWidth="980.0" style="-fx-background-radius: 20; -fx-background-color: rgba(255,255,255,0.15); -fx-background-insets: 0; -fx-effect: dropsshadow(gaussian,one-pass-box,0,0.35,20,0); -fx-background-radius: 20; -fx-border-width: 1; -fx-border-color: gold; -fx-border-radius: 40;">
+      <Pane fx:id="pane" layoutX="498.0" layoutY="446.0" prefHeight="620.0" prefWidth="980.0" style="-fx-background-radius: 20; -fx-background-color: rgba(255,255,255,0.15); -fx-background-insets: 0; -fx-effect: dropsshadow(gaussian,one-pass-box,0,0.35,20,0); -fx-background-radius: 20; -fx-border-width: 1; -fx-border-color: gold; -fx-border-radius: 40;">
          <children>
-            <Text fill="#152075" layoutX="329.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crie sua conta" wrappingWidth="353.1500244140625">
+            <Text fx:id="text" fill="#152075" layoutX="329.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crie sua conta" wrappingWidth="353.1500244140625">
                <font>
                   <Font name="Dubai Medium" size="49.0" />
                </font>
             </Text>
-            <Pane layoutX="517.0" layoutY="148.0" prefHeight="62.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+            <Pane fx:id="panesenha" layoutX="496.0" layoutY="148.0" prefHeight="62.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
                <children>
                   <TextField fx:id="txtsenha" layoutX="52.0" prefHeight="61.0" prefWidth="375.0" promptText="Senha" style="-fx-background-color: transparente;">
                      <font>
                         <Font name="Dubai Medium" size="24.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="48.0" fitWidth="60.0" layoutX="5.0" layoutY="9.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgCadeado" fitHeight="48.0" fitWidth="60.0" layoutX="5.0" layoutY="9.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/64e3baa9-5599-43c6-898b-3ad74fe4be51.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutX="32.0" layoutY="223.0" prefHeight="61.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+            <Pane fx:id="pemail" layoutX="9.0" layoutY="223.0" prefHeight="61.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
                <children>
-                  <ImageView fitHeight="44.0" fitWidth="47.0" layoutX="1.0" layoutY="12.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgEmail" fitHeight="44.0" fitWidth="47.0" layoutX="1.0" layoutY="12.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/ChatGPT%20Image%201%20de%20set.%20de%202026,%2019_46_15.png" />
                      </image>
@@ -51,9 +54,9 @@
                   </TextField>
                </children>
             </Pane>
-            <Pane layoutX="33.0" layoutY="295.0" prefHeight="61.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+            <Pane fx:id="pTelefone" layoutX="10.0" layoutY="295.0" prefHeight="61.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
                <children>
-                  <ImageView fitHeight="61.0" fitWidth="47.0" layoutX="2.0" layoutY="12.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgTelefone" fitHeight="61.0" fitWidth="47.0" layoutX="2.0" layoutY="12.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/e7839508-d089-424b-aa0c-2391c18f02a9%20(1).png" />
                      </image>
@@ -65,9 +68,9 @@
                   </TextField>
                </children>
             </Pane>
-            <Pane layoutX="36.0" layoutY="367.0" prefHeight="61.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+            <Pane fx:id="pdataNascimento" layoutX="13.0" layoutY="367.0" prefHeight="61.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="3.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgData" fitHeight="45.0" fitWidth="53.0" layoutX="3.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/ChatGPT%20Image%201%20de%20set.%20de%202026,%2019_50_23%20(3).png" />
                      </image>
@@ -79,23 +82,23 @@
                   </TextField>
                </children>
             </Pane>
-            <Pane layoutX="517.0" layoutY="220.0" prefHeight="61.0" prefWidth="467.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+            <Pane fx:id="pconfisenha" layoutX="496.0" layoutY="220.0" prefHeight="61.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
                <children>
                   <TextField fx:id="txtconfirmarsenha" layoutX="52.0" prefHeight="61.0" prefWidth="375.0" promptText="Confirmar senha" style="-fx-background-color: transparente;">
                      <font>
                         <Font name="Dubai Medium" size="24.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="3.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgCadeado2" fitHeight="45.0" fitWidth="60.0" layoutX="3.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/64e3baa9-5599-43c6-898b-3ad74fe4be51.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutX="30.0" layoutY="148.0" prefHeight="61.0" prefWidth="464.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+            <Pane fx:id="pNome" layoutX="9.0" layoutY="148.0" prefHeight="61.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
                <children>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="8.0" layoutY="11.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgPerfil" fitHeight="40.0" fitWidth="40.0" layoutX="8.0" layoutY="11.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/ChatGPT%20Image%201%20de%20set.%20de%202026,%2019_43_32.png" />
                      </image>
@@ -110,9 +113,54 @@
                   </TextField>
                </children>
             </Pane>
+            <Button fx:id="buttonCadastro" layoutX="113.0" layoutY="494.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="721.0" style="-fx-background-radius: 40px; -fx-background-color: linear-gradient(        to bottom,        #FFE08A,        #F7C04F,        #E0A12F    );; -fx-border-radius: 40px; -fx-text-fill: #172B55; -fx-stroke: #D99A2B; -fx-stroke-width: 2px;" text="Cadastrar">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imgSeta" fitHeight="41.0" fitWidth="54.0" layoutX="723.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/seta%20(1).png" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="CheckBox" layoutX="150.0" layoutY="457.0" mnemonicParsing="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </CheckBox>
+            <Text fx:id="texto" fill="#1500ff" layoutX="183.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Li e aceito os ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Hyperlink fx:id="TermoDUso" layoutX="296.0" layoutY="452.0" text="Termos de Uso" textFill="DARKGOLDENROD">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Hyperlink>
+            <Text fx:id="texto2" fill="#1500ff" layoutX="450.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="e a">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Hyperlink fx:id="PoliticaPri" layoutX="474.0" layoutY="452.0" text="política de Privacidade" textFill="DARKGOLDENROD">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Hyperlink>
+            <Text fx:id="texto3" fill="#1500ff" layoutX="285.0" layoutY="602.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Já possui uma conta?">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Hyperlink fx:id="Entrar" layoutX="475.0" layoutY="576.0" text="Entrar" textFill="DARKGOLDENROD">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Hyperlink>
          </children>
       </Pane>
-      <Text fill="#152075" layoutX="594.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Junte-se ao GoHospede e tenha uma expência única em hospitalidade.">
+      <Text fx:id="texto4" fill="#152075" layoutX="594.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Junte-se ao GoHospede e tenha uma expência única em hospitalidade.">
          <font>
             <Font name="Dubai Medium" size="27.0" />
          </font>
