@@ -1,6 +1,9 @@
 package application;
 
+import java.awt.event.ActionEvent;
+
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Hyperlink;
@@ -107,5 +110,65 @@ public class TelaControleCadastro {
 
     @FXML
     private TextField txttelefone;
+    
+    @FXML
+    private void cadastrar(ActionEvent event) {
+
+        String nome = txtnome.getText().trim();
+        String email = txtEmail.getText().trim();
+        String telefone = txttelefone.getText().trim();
+        String nascimento = txtnascimento.getText().trim();
+        String senha = txtsenha.getText();
+        String confirmarSenha = txtconfirmarsenha.getText();
+
+        // Verifica se algum campo está vazio
+        if (nome.isEmpty() ||
+            email.isEmpty() ||
+            telefone.isEmpty() ||
+            nascimento.isEmpty() ||
+            senha.isEmpty() ||
+            confirmarSenha.isEmpty()) {
+
+            Alert alerta = new Alert(Alert.AlertType.WARNING);
+            alerta.setTitle("Cadastro");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Preencha todos os campos para realizar o cadastro.");
+            alerta.showAndWait();
+
+            return;
+        }
+
+        // Verifica se as senhas são iguais
+        if (!senha.equals(confirmarSenha)) {
+
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setTitle("Cadastro");
+            alerta.setHeaderText(null);
+            alerta.setContentText("As senhas não são iguais.");
+            alerta.showAndWait();
+
+            return;
+        }
+
+        // Verifica se aceitou os termos
+        if (!CheckBox.isSelected()) {
+
+            Alert alerta = new Alert(Alert.AlertType.WARNING);
+            alerta.setTitle("Cadastro");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Você precisa aceitar os termos de uso e a política de privacidade.");
+            alerta.showAndWait();
+
+            return;
+        }
+
+        // Se chegou aqui, o cadastro pode continuar
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle("Cadastro");
+        alerta.setHeaderText(null);
+        alerta.setContentText("Cadastro realizado com sucesso!");
+        alerta.showAndWait();
+    }
+
 
 }
