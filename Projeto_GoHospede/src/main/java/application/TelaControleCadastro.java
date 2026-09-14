@@ -1,7 +1,7 @@
 package application;
 
-import java.awt.event.ActionEvent;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -14,6 +14,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 public class TelaControleCadastro {
+    @FXML
+    private CheckBox Mostrarsenha;
 
     @FXML
     private CheckBox CheckBox;
@@ -121,7 +123,7 @@ public class TelaControleCadastro {
         String senha = txtsenha.getText();
         String confirmarSenha = txtconfirmarsenha.getText();
 
-        // Verifica se algum campo está vazio
+
         if (nome.isEmpty() ||
             email.isEmpty() ||
             telefone.isEmpty() ||
@@ -138,7 +140,6 @@ public class TelaControleCadastro {
             return;
         }
 
-        // Verifica se as senhas são iguais
         if (!senha.equals(confirmarSenha)) {
 
             Alert alerta = new Alert(Alert.AlertType.ERROR);
@@ -150,7 +151,6 @@ public class TelaControleCadastro {
             return;
         }
 
-        // Verifica se aceitou os termos
         if (!CheckBox.isSelected()) {
 
             Alert alerta = new Alert(Alert.AlertType.WARNING);
@@ -162,7 +162,6 @@ public class TelaControleCadastro {
             return;
         }
 
-        // Se chegou aqui, o cadastro pode continuar
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setTitle("Cadastro");
         alerta.setHeaderText(null);

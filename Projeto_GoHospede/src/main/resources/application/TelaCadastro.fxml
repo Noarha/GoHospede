@@ -68,7 +68,7 @@
                   </TextField>
                </children>
             </Pane>
-            <Pane fx:id="pdataNascimento" layoutX="13.0" layoutY="367.0" prefHeight="61.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+            <Pane fx:id="pdataNascimento" layoutX="11.0" layoutY="367.0" prefHeight="61.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
                <children>
                   <ImageView fx:id="imgData" fitHeight="45.0" fitWidth="53.0" layoutX="3.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -113,7 +113,7 @@
                   </TextField>
                </children>
             </Pane>
-            <Button fx:id="buttonCadastro" layoutX="113.0" layoutY="494.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="721.0" style="-fx-background-radius: 40px; -fx-background-color: linear-gradient(        to bottom,        #FFE08A,        #F7C04F,        #E0A12F    );; -fx-border-radius: 40px; -fx-text-fill: #172B55; -fx-stroke: #D99A2B; -fx-stroke-width: 2px;" text="Cadastrar">
+            <Button fx:id="buttonCadastro" layoutX="113.0" layoutY="494.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="84.0" prefWidth="721.0" style="-fx-background-radius: 40px; -fx-background-color: linear-gradient(        to bottom,        #FFE08A,        #F7C04F,        #E0A12F    );; -fx-border-radius: 40px; -fx-text-fill: #172B55; -fx-stroke: #D99A2B; -fx-stroke-width: 2px;" text="Cadastrar">
                <font>
                   <Font size="40.0" />
                </font>
@@ -158,6 +158,11 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Hyperlink>
+            <CheckBox fx:id="Mostrarsenha" layoutX="811.0" layoutY="295.0" mnemonicParsing="false" text="Mostrar senha" textFill="#152075">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
          </children>
       </Pane>
       <Text fx:id="texto4" fill="#152075" layoutX="594.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Junte-se ao GoHospede e tenha uma expência única em hospitalidade.">
