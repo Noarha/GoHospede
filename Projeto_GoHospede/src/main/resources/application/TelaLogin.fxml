@@ -36,7 +36,7 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <TextField fx:id="emailescrever" layoutX="107.0" layoutY="234.0" prefHeight="67.0" prefWidth="499.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 10px;" />
+            <TextField fx:id="emailescrever" layoutX="107.0" layoutY="234.0" prefHeight="67.0" prefWidth="499.0" promptText="Dgite sua semha" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 10px;" />
             <Text fx:id="senha" fill="WHITE" layoutX="96.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="179.503173828125">
                <font>
                   <Font size="30.0" />
