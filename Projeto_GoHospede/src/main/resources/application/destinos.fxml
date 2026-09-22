@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/ChatGPT%20Image%2028%20de%20ago.%20de%202026,%2019_25_53.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="1154.0" layoutY="64.0" prefHeight="934.0" prefWidth="674.0" style="-fx-background-color: #4a4a4a;">
+         <children>
+            <Text fill="WHITE" layoutX="38.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Destinos">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="40.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descubra lugares incríveis e viva experiências inesquecíveis.Encontre seu próximo destino com o GoHospede." wrappingWidth="523.84326171875">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <ScrollPane layoutY="168.0" prefHeight="768.0" prefWidth="674.0" style="-fx-background-color: #4a4a4a; -fx-hbar-policy: NEVER; -fx-vbar-policy: NEVER;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="922.0" prefWidth="682.0" style="-fx-background-color: #4a4a4a;">
+                     <children>
+                        <VBox layoutY="178.0" prefHeight="741.0" prefWidth="672.0" style="-fx-background-color: #4a4a4a;">
+                           <children>
+                              <HBox prefHeight="172.0" prefWidth="672.0">
+                                 <children>
+                                    <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagens/ChatGPT%20Image%2010_09_2026,%2020_04_36.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text="Fortaleza - CE">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Praias famosas, cultura vibrante e paisagens deslumbrantes." wrappingWidth="301.97119140625">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Line endX="554.2929077148438" endY="-2.6923885345458984" startX="-100.0" stroke="#ffc000" />
+                              <HBox prefHeight="172.0" prefWidth="672.0">
+                                 <children>
+                                    <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagens/ChatGPT%20Image%2010_09_2026,%2020_07_38.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="210.0" prefWidth="314.0">
+                                       <children>
+                                          <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text="Porto das Dunas">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Casa do famoso parque aquático Beach Park, excelente para viagens em família" wrappingWidth="316.908203125">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Line endX="556.2929077148438" endY="-3.9350290298461914" startX="-100.0" stroke="#ffc000" />
+                              <HBox prefHeight="214.0" prefWidth="608.0">
+                                 <children>
+                                    <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/ChatGPT%20Image%2010_09_2026,%2020_12_18.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="214.0" prefWidth="271.0">
+                                       <children>
+                                          <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text=" jericoacoara">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruas de areia, lagoas que parecem miragens e um pôr do sol que desacelera o coração." wrappingWidth="310.70361328125">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Line endX="-38.5" startX="-688.5" stroke="#ffc000" />
+                              <HBox prefHeight="168.0" prefWidth="666.0">
+                                 <children>
+                                    <VBox prefHeight="192.0" prefWidth="326.0">
+                                       <children>
+                                          <ImageView fitHeight="203.0" fitWidth="355.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../../../Downloads/Imagem-CPG-redimencionada-para-google-discovery-2026-01-02T084919.739.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="201.0" prefWidth="322.0">
+                                       <children>
+                                          <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text="guaramiranga">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="é um encantador destino serrano, conhecido pelo clima agradável. Com seu charme e tranquilidade, é o lugar perfeito para quem busca natureza, cultura e momentos de descanso.  " wrappingWidth="315.986328125">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox layoutY="-2.0" prefHeight="172.0" prefWidth="672.0">
+                           <children>
+                              <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagens/ChatGPT%20Image%2010_09_2026,%2020_02_06.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="168.0" prefWidth="380.0">
+                                 <children>
+                                    <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text="Cumbuco Caucaia">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Famoso pelas dunas e ideal para esportes de vento" wrappingWidth="309.1591796875">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Line endX="294.0" layoutX="362.0" layoutY="178.0" startX="-405.0" stroke="#ffc000" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
