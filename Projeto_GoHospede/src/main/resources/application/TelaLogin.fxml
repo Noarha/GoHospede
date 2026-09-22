@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TelaControleCadastro">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TelaControleLogin">
    <children>
       <ImageView fx:id="Tela" fitHeight="1095.0" fitWidth="1924.0" layoutX="-4.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -49,7 +49,7 @@
                   <Font size="25.0" />
                </font>
             </Text>
-            <Hyperlink fx:id="cadastros" layoutX="406.0" layoutY="805.0" text="Cadastre-se" textFill="#d9a928">
+            <Hyperlink fx:id="cadastros" layoutX="406.0" layoutY="805.0" onAction="#abrirTelaControleCadastro" text="Cadastre-se" textFill="#d9a928">
                <font>
                   <Font size="25.0" />
                </font>
@@ -69,6 +69,11 @@
                   <Font size="25.0" />
                </font>
             </Hyperlink>
+            <ImageView fx:id="imagemgoogle" fitHeight="93.0" fitWidth="336.0" layoutX="246.0" layoutY="690.0" onMouseClicked="#EntrarComoGoogle" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/logogoogle.png" />
+               </image>
+            </ImageView>
          </children>
          <opaqueInsets>
             <Insets top="5.0" />

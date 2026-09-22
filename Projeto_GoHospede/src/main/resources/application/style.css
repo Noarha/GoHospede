@@ -1,0 +1,34 @@
+/* 1. Remove o fundo geral e a borda principal do DatePicker */
+.date-picker {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* 2. Remove o fundo e a borda da caixa de texto interna */
+.date-picker > .text-field {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+}
+
+/* 3. Remove a parte cinzenta (fundo) e a borda do botão do calendário */
+.date-picker > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+}
+
+/* 4. Remove efeitos de foco/hover padrão que costumam reativar bordas ou fundos */
+.date-picker:focused,
+.date-picker > .text-field:focused,
+.date-picker > .arrow-button:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-box-shadow: none;
+}
+
+/* Garante que o campo de texto interno e o calendário acompanhem o tamanho */
+.date-picker > .text-field {
+    -fx-font-size: 16px;
+}
