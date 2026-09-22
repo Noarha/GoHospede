@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="paneteste" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TelaControleInicio">
+   <children>
+      <AnchorPane fx:id="painelinicio" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <ImageView fx:id="imagemfundo" fitHeight="1080.0" fitWidth="1920.0" layoutX="-10.0" layoutY="-10.0">
+               <image>
+                  <Image url="@../imagens/7e356422-74d2-40a8-8fe3-078390dc2c04.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="txtencontre" layoutX="752.0" layoutY="202.0" prefHeight="57.0" prefWidth="614.0" text="ENCONTRE O HOTEL IDEAL " textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtviagem" layoutX="882.0" layoutY="252.0" prefHeight="44.0" prefWidth="388.0" text="PARA SUA VIAGEM" textFill="#d9a928">
+               <font>
+                  <Font name="Cambria Math" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtreserve" layoutX="811.0" layoutY="295.0" prefHeight="28.0" prefWidth="455.0" text="Reserve hotéis com segurança, conforto e praticidade." textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Pane layoutX="242.0" layoutY="440.0" maxHeight="130.0" maxWidth="1200.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 15px;" />
+            <Pane fx:id="paneblack" layoutX="556.0" layoutY="349.0" opacity="0.83" prefHeight="208.0" prefWidth="928.0" style="-fx-background-color: black; -fx-background-radius: 25;">
+               <children>
+                  <Label fx:id="lbldestino" layoutX="58.0" layoutY="16.0" text="DESTINO" textFill="WHITE" />
+                  <Label fx:id="txtcheckinin" layoutX="284.0" layoutY="17.0" text="CHECKIN-IN" textFill="WHITE" />
+                  <Label fx:id="txtcheckinout" layoutX="496.0" layoutY="18.0" prefHeight="21.0" prefWidth="104.0" text="CKECKIN-OUT" textFill="WHITE" />
+                  <Label fx:id="txthospede" layoutX="735.0" layoutY="13.0" prefHeight="36.0" prefWidth="129.0" text="HÓSPEDE" textFill="WHITE" />
+                  <DatePicker fx:id="datecheckinin" layoutX="245.0" layoutY="45.0" prefHeight="35.0" prefWidth="194.0" style="-fx-background-color: transparent; -fx-background-radius: 5; -fx-background-insets: 0;" stylesheets="@style.css" />
+                  <DatePicker fx:id="ckechinOUt" layoutX="473.0" layoutY="50.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 5; -fx-background-insets: 0;" stylesheets="@style.css" />
+                  <Spinner fx:id="spinnerhospede" layoutX="710.0" layoutY="50.0" stylesheets="@style.css" />
+                  <Button fx:id="bntpesquisar" layoutX="342.0" layoutY="144.0" mnemonicParsing="false" onMouseClicked="#pesquisarhoteis" prefHeight="31.0" prefWidth="292.0" style="-fx-background-color: linear-gradient(    to bottom,    #F2B83F 0%,    #E5A21A 50%,    #B87508 100%);; -fx-background-radius: 10px; -fx-text-fill: #162B5B; -fx-font-size: 15px; -fx-font-weight: bold; -fx-cursor: hand;" text="PESQUISAR HOTÉIS" />
+                  <Pane fx:id="lupa" layoutX="387.0" layoutY="146.0" prefHeight="28.0" prefWidth="33.0">
+                     <children>
+                        <ImageView fitHeight="21.0" fitWidth="26.0" layoutX="5.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/lupas.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ComboBox fx:id="combodestino" editable="true" layoutX="16.0" layoutY="43.0" prefHeight="33.0" prefWidth="200.0" promptText="Para onde você vai?" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-color: white;" styleClass="style.css" stylesheets="@style.css" />
+               </children>
+            </Pane>
+            <ImageView fx:id="imgcoroa" fitHeight="113.0" fitWidth="107.0" layoutX="1006.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/coroa-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Line endX="100.0" layoutX="783.0" layoutY="596.0" opacity="0.4" startX="-33.0" stroke="#d9a928" strokeWidth="2.0">
+               <effect>
+                  <ColorAdjust brightness="-0.63" />
+               </effect>
+            </Line>
+            <Line endX="100.0" layoutX="925.0" layoutY="587.0" startX="7.0" strokeWidth="2.0">
+               <stroke>
+                  <LinearGradient endX="0.20192307692307696" endY="0.3701923076923077" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.7166666388511658" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.798780487804878">
+                           <color>
+                              <Color red="1.0" green="0.7166666388511658" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.18421052396297455" green="0.1313352882862091" blue="0.1313352882862091" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line endX="100.0" layoutX="972.0" layoutY="596.0" opacity="0.4" startX="-33.0" stroke="#d9a928" strokeWidth="2.0">
+               <effect>
+                  <ColorAdjust brightness="-0.63" />
+               </effect>
+            </Line>
+            <Line endX="123.0" layoutX="1069.0" layoutY="588.0" startX="32.0" strokeWidth="2.0">
+               <stroke>
+                  <LinearGradient endX="0.8221153846153846" endY="0.4423076923076923" startX="0.3076923076923077" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.7166666388511658" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.798780487804878">
+                           <color>
+                              <Color red="1.0" green="0.7166666388511658" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.18421052396297455" green="0.1313352882862091" blue="0.1313352882862091" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Label layoutX="977.0" layoutY="602.0" text="DESTINOS POPULARES" textFill="WHITE" />
+            <Line endX="100.0" layoutX="717.0" layoutY="620.0" opacity="0.4" startX="5.0" stroke="#d9a928" strokeWidth="2.0">
+               <effect>
+                  <ColorAdjust brightness="-0.63" />
+               </effect>
+            </Line>
+            <Line endX="100.0" layoutX="866.0" layoutY="614.0" startX="9.0" strokeWidth="2.0">
+               <stroke>
+                  <LinearGradient endX="0.33653846153846156" endY="0.23557692307692307" startX="0.9326923076923077" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.7166666388511658" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.798780487804878">
+                           <color>
+                              <Color red="1.0" green="0.7166666388511658" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.18421052396297455" green="0.1313352882862091" blue="0.1313352882862091" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line endX="100.0" layoutX="1118.0" layoutY="614.0" startX="24.0" strokeWidth="2.0">
+               <stroke>
+                  <LinearGradient endX="0.46153846153846156" endY="0.5384615384615385">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.7166666388511658" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.798780487804878">
+                           <color>
+                              <Color red="1.0" green="0.7166666388511658" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.18421052396297455" green="0.1313352882862091" blue="0.1313352882862091" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Line endX="100.0" layoutX="1140.0" layoutY="613.0" opacity="0.4" startX="5.0" stroke="#d9a928" strokeWidth="2.0">
+               <effect>
+                  <ColorAdjust brightness="-0.63" />
+               </effect>
+            </Line>
+            <ImageView fx:id="esquerdo" fitHeight="97.0" fitWidth="78.0" layoutX="585.0" layoutY="683.0" onMouseClicked="#anterior" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/seta%20esquerda%20original.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="praiasparte1" layoutX="727.0" layoutY="661.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="82.0" spacing="13.0">
+                     <children>
+                        <StackPane onMouseClicked="#destinofortaleza" prefHeight="130.0" prefWidth="230.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: rgba(255,255,255,0.20);; -fx-border-width: 1;">
+                           <children>
+                              <ImageView fx:id="praiafortaleza" fitHeight="130.0" fitWidth="218.0" pickOnBounds="true" style="-fx-background-radius: 5000;">
+                                 <image>
+                                    <Image url="@../imagens/fortaleza.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Pane onMouseClicked="#destinofortaleza" prefHeight="130.0" prefWidth="218.0" style="-fx-background-color: linear-gradient(    to bottom,    rgba(0,0,0,0.0) 20%,    rgba(0,0,0,0.15) 45%,    rgba(0,0,0,0.85) 100%);;" />
+                              <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="45.0" prefWidth="218.0" spacing="2.0" StackPane.alignment="BOTTOM_LEFT">
+                                 <children>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: red;" text="📍" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold;" text="Fortaleza" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label lineSpacing="3.0" style="-fx-text-fill: white; -fx-font-size: 10px;" text="A partir de" />
+                                          <Label style="-fx-text-fill: #ffb000;; -fx-font-size: 10px; -fx-font-weight: bold;" text="R$ 159" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 10px;" text="/noite" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="12.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane onMouseClicked="#destinoporto" prefHeight="130.0" prefWidth="230.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: rgba(255,255,255,0.20);; -fx-border-width: 1;">
+                           <children>
+                              <ImageView fx:id="praiaporto" fitHeight="130.0" fitWidth="218.0" focusTraversable="true" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../imagens/portodasdunas.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Pane fx:id="portodasdunas" onMouseClicked="#destinoporto" prefHeight="130.0" prefWidth="218.0" style="-fx-background-color: linear-gradient(    to bottom,    rgba(0,0,0,0.0) 20%,    rgba(0,0,0,0.15) 45%,    rgba(0,0,0,0.85) 100%);" />
+                              <VBox maxHeight="-Infinity" prefHeight="45.0" prefWidth="218.0" spacing="2.0" StackPane.alignment="BOTTOM_LEFT">
+                                 <children>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: red;" text="📍" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold;" text="Porto das dunas" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" spacing="3.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 10px;" text="A partir de" />
+                                          <Label style="-fx-text-fill: #ffb000; -fx-font-size: 10px; -fx-font-weight: bold;" text="R$ 199" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 10px;" text="/ noite" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                                 <padding>
+                                    <Insets bottom="8.0" left="12.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane onMouseClicked="#destinocumbuco" prefHeight="130.0" prefWidth="230.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: rgba(255,255,255,0.20);; -fx-border-width: 1;">
+                           <children>
+                              <ImageView fx:id="praiacumbuco" fitHeight="130.0" fitWidth="218.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../imagens/cumbuco.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Pane fx:id="cumbuco" onMouseClicked="#destinocumbuco" prefHeight="130.0" prefWidth="218.0" style="-fx-background-color: linear-gradient(    to bottom,    rgba(0,0,0,0.0) 20%,    rgba(0,0,0,0.15) 45%,    rgba(0,0,0,0.85) 100%);" />
+                              <VBox maxHeight="-Infinity" onMouseClicked="#destinocumbuco" prefHeight="45.0" prefWidth="218.0" spacing="2.0" StackPane.alignment="BOTTOM_LEFT">
+                                 <children>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: red;" text="📍" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold;" text="Cumbuco" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 10px;" text="A partir de" />
+                                          <Label style="-fx-text-fill: #ffb000; -fx-font-size: 10px; -fx-font-weight: bold;" text="R$ 189" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 10px;" text="/ noite" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="12.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="direito" fitHeight="97.0" fitWidth="78.0" layoutX="1564.0" layoutY="684.0" onMouseClicked="#proximo" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/seta%20direita%20original.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="praiasparte2" layoutX="727.0" layoutY="661.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="82.0" spacing="13.0">
+                     <children>
+                        <StackPane onMouseClicked="#destinojericoacara" prefHeight="130.0" prefWidth="230.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: rgba(255,255,255,0.20);; -fx-border-width: 1;">
+                           <children>
+                              <ImageView fx:id="praiafortaleza1" fitHeight="130.0" fitWidth="218.0" pickOnBounds="true" style="-fx-background-radius: 5000;">
+                                 <image>
+                                    <Image url="@../imagens/jeri.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Pane prefHeight="130.0" prefWidth="218.0" style="-fx-background-color: linear-gradient(    to bottom,    rgba(0,0,0,0.0) 20%,    rgba(0,0,0,0.15) 45%,    rgba(0,0,0,0.85) 100%);;" />
+                              <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="45.0" prefWidth="218.0" spacing="2.0" StackPane.alignment="BOTTOM_LEFT">
+                                 <children>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: red;" text="📍" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold;" text="jericoacoara" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label lineSpacing="3.0" style="-fx-text-fill: white; -fx-font-size: 10px;" text="A partir de" />
+                                          <Label style="-fx-text-fill: #ffb000;; -fx-font-size: 10px; -fx-font-weight: bold;" text="R$ 229" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 10px;" text="/noite" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="12.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane onMouseClicked="#destinoguaramiranga" prefHeight="130.0" prefWidth="230.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: rgba(255,255,255,0.20);; -fx-border-width: 1;">
+                           <children>
+                              <ImageView fx:id="praiaporto1" fitHeight="130.0" fitWidth="218.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../imagens/guara.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Pane prefHeight="130.0" prefWidth="218.0" style="-fx-background-color: linear-gradient(    to bottom,    rgba(0,0,0,0.0) 20%,    rgba(0,0,0,0.15) 45%,    rgba(0,0,0,0.85) 100%);" />
+                              <VBox maxHeight="-Infinity" prefHeight="45.0" prefWidth="218.0" spacing="2.0" StackPane.alignment="BOTTOM_LEFT">
+                                 <children>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: red;" text="📍" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold;" text="Guaramiranga" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" spacing="3.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 10px;" text="A partir de" />
+                                          <Label style="-fx-text-fill: #ffb000; -fx-font-size: 10px; -fx-font-weight: bold;" text="R$ 179" />
+                                          <Label style="-fx-text-fill: white; -fx-font-size: 10px;" text="/ noite" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                                 <padding>
+                                    <Insets bottom="8.0" left="12.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paineldestinos" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/ChatGPT%20Image%2028%20de%20ago.%20de%202026,%2019_25_53.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="1154.0" layoutY="64.0" prefHeight="934.0" prefWidth="674.0" style="-fx-background-color: #4a4a4a;">
+               <children>
+                  <Text fill="WHITE" layoutX="38.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Destinos">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="40.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descubra lugares incríveis e viva experiências inesquecíveis.Encontre seu próximo destino com o GoHospede." wrappingWidth="523.84326171875">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane layoutY="168.0" prefHeight="768.0" prefWidth="674.0" style="-fx-background-color: #4a4a4a; -fx-hbar-policy: NEVER; -fx-vbar-policy: NEVER;">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="922.0" prefWidth="682.0" style="-fx-background-color: #4a4a4a;">
+                           <children>
+                              <VBox layoutY="178.0" prefHeight="741.0" prefWidth="672.0" style="-fx-background-color: #4a4a4a;">
+                                 <children>
+                                    <HBox prefHeight="172.0" prefWidth="672.0">
+                                       <children>
+                                          <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../imagens/ChatGPT%20Image%2010_09_2026,%2020_04_36.png" />
+                                             </image>
+                                          </ImageView>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text="Fortaleza - CE">
+                                                   <font>
+                                                      <Font size="30.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Praias famosas, cultura vibrante e paisagens deslumbrantes." wrappingWidth="301.97119140625">
+                                                   <font>
+                                                      <Font size="25.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="554.2929077148438" endY="-2.6923885345458984" startX="-100.0" stroke="#ffc000" />
+                                    <HBox prefHeight="172.0" prefWidth="672.0">
+                                       <children>
+                                          <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../imagens/ChatGPT%20Image%2010_09_2026,%2020_07_38.png" />
+                                             </image>
+                                          </ImageView>
+                                          <VBox prefHeight="210.0" prefWidth="314.0">
+                                             <children>
+                                                <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text="Porto das Dunas">
+                                                   <font>
+                                                      <Font size="30.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Casa do famoso parque aquático Beach Park, excelente para viagens em família" wrappingWidth="316.908203125">
+                                                   <font>
+                                                      <Font size="25.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="556.2929077148438" endY="-3.9350290298461914" startX="-100.0" stroke="#ffc000" />
+                                    <HBox prefHeight="214.0" prefWidth="608.0">
+                                       <children>
+                                          <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../../../Downloads/ChatGPT%20Image%2010_09_2026,%2020_12_18.png" />
+                                             </image>
+                                          </ImageView>
+                                          <VBox prefHeight="214.0" prefWidth="271.0">
+                                             <children>
+                                                <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text=" jericoacoara">
+                                                   <font>
+                                                      <Font size="30.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruas de areia, lagoas que parecem miragens e um pôr do sol que desacelera o coração." wrappingWidth="310.70361328125">
+                                                   <font>
+                                                      <Font size="25.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="-38.5" startX="-688.5" stroke="#ffc000" />
+                                    <HBox prefHeight="168.0" prefWidth="666.0">
+                                       <children>
+                                          <VBox prefHeight="192.0" prefWidth="326.0">
+                                             <children>
+                                                <ImageView fitHeight="203.0" fitWidth="355.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../../../../Downloads/Imagem-CPG-redimencionada-para-google-discovery-2026-01-02T084919.739.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="201.0" prefWidth="322.0">
+                                             <children>
+                                                <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text="guaramiranga">
+                                                   <font>
+                                                      <Font size="30.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="é um encantador destino serrano, conhecido pelo clima agradável. Com seu charme e tranquilidade, é o lugar perfeito para quem busca natureza, cultura e momentos de descanso.  " wrappingWidth="315.986328125">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox layoutY="-2.0" prefHeight="172.0" prefWidth="672.0">
+                                 <children>
+                                    <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagens/ChatGPT%20Image%2010_09_2026,%2020_02_06.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="168.0" prefWidth="380.0">
+                                       <children>
+                                          <Text fill="#ffc000" strokeType="OUTSIDE" strokeWidth="0.0" text="Cumbuco Caucaia">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Famoso pelas dunas e ideal para esportes de vento" wrappingWidth="309.1591796875">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Line endX="294.0" layoutX="362.0" layoutY="178.0" startX="-405.0" stroke="#ffc000" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="86.0" prefWidth="1920.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="78.0" layoutY="31.0" text="Hospede" textFill="#d99a24">
+               <font>
+                  <Font name="Georgia" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="24.0" text="Go" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="62.0" text="HOSPITALIDADE &amp; RESERVAS" textFill="#5b5959">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblmenuinicio" layoutX="754.0" layoutY="54.0" onMouseClicked="#telainicio" text="INÍCIO" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="923.0" layoutY="53.0" text="SOBRE NÓS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1097.0" layoutY="54.0" text="SERVIÇOS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblmenudestinos" layoutX="1272.0" layoutY="54.0" onMouseClicked="#teladestinos" text="DESTINOS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1453.0" layoutY="54.0" text="CONTATO" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -92,6 +92,12 @@ public class TelaControleCadastro {
 
     @FXML
     private Text texto2;
+    
+    @FXML
+    private TextField txtDigitesuasenha1;
+    
+    @FXML
+    private TextField txtDigitesuasenha2;
 
     @FXML
     private Text texto3;
@@ -101,7 +107,6 @@ public class TelaControleCadastro {
 
     @FXML
     private TextField txtEmail;
-
 
     @FXML
     private PasswordField PfDigitesenha1;
@@ -150,7 +155,47 @@ public class TelaControleCadastro {
     	mascaras mask = new mascaras();
     	mask.aplicarMascara(txtcpf,"###.###.###-##");
     	mask.aplicarMascara(txttelefone,"(##)#####-####");
-    } 	
+    
+    	if (PfDigitesenha1 != null) PfDigitesenha1.setVisible(true);
+        if (PfDigitesenha2 != null) PfDigitesenha2.setVisible(true);
+        
+        if (txtDigitesuasenha1 != null) txtDigitesuasenha1.setVisible(false);
+        if (txtDigitesuasenha2 != null) txtDigitesuasenha2.setVisible(false);
+
+   
+        if (Mostrarsenha != null) {
+            Mostrarsenha.setOnAction(event -> {
+                boolean mostrar = Mostrarsenha.isSelected();
+
+
+                if (PfDigitesenha1 != null && txtDigitesuasenha1 != null) {
+                    if (mostrar) {
+                        txtDigitesuasenha1.setText(PfDigitesenha1.getText());
+                        txtDigitesuasenha1.setVisible(true);
+                        PfDigitesenha1.setVisible(false);
+                    } else {
+                        PfDigitesenha1.setText(txtDigitesuasenha1.getText());
+                        txtDigitesuasenha1.setVisible(false);
+                        PfDigitesenha1.setVisible(true);
+                    }
+                }
+
+
+                if (PfDigitesenha2 != null && txtDigitesuasenha2 != null) {
+                    if (mostrar) {
+                        txtDigitesuasenha2.setText(PfDigitesenha2.getText());
+                        txtDigitesuasenha2.setVisible(true);
+                        PfDigitesenha2.setVisible(false);
+                    } else {
+                        PfDigitesenha2.setText(txtDigitesuasenha2.getText());
+                        txtDigitesuasenha2.setVisible(false);
+                        PfDigitesenha2.setVisible(true);
+                    }
+                }
+            });
+        }
+    }	
+
 
     @FXML
     private void cadastrar(ActionEvent event) {

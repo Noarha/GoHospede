@@ -102,30 +102,40 @@
             </Pane>
             <Pane fx:id="panesenha" layoutX="496.0" layoutY="222.0" prefHeight="62.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
                <children>
-                  <PasswordField fx:id="PfDigitesenha1" layoutX="50.0" prefHeight="61.0" prefWidth="400.0" promptText="Digite sua senha" style="-fx-background-color: transparent;">
-                     <font>
-                        <Font name="Dubai Medium" size="24.0" />
-                     </font>
-                  </PasswordField>
                   <ImageView fx:id="imgCadeado" fitHeight="48.0" fitWidth="60.0" layoutX="5.0" layoutY="7.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/64e3baa9-5599-43c6-898b-3ad74fe4be51.png" />
                      </image>
                   </ImageView>
-               </children>
-            </Pane>
-            <Pane fx:id="pconfisenha" layoutX="496.0" layoutY="296.0" prefHeight="61.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
-               <children>
-                  <PasswordField fx:id="PfDigitesenha2" layoutX="49.0" layoutY="-1.0" prefHeight="61.0" prefWidth="402.0" promptText="Digite sua senha" style="-fx-background-color: transparent;">
+                  <PasswordField fx:id="PfDigitesenha1" layoutX="49.0" prefHeight="61.0" prefWidth="400.0" promptText="Digite sua senha" style="-fx-background-color: transparent;">
                      <font>
                         <Font name="Dubai Medium" size="24.0" />
                      </font>
                   </PasswordField>
+                  <TextField fx:id="txtDigitesuasenha1" layoutX="54.0" prefHeight="66.0" prefWidth="403.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Dubai Medium" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane fx:id="pconfisenha" layoutX="496.0" layoutY="296.0" prefHeight="61.0" prefWidth="468.0" style="-fx-background-color: white; -fx-border-radius: 20px; -fx-border-color: white; -fx-background-radius: 20px;">
+               <children>
                   <ImageView fx:id="imgCadeado2" fitHeight="45.0" fitWidth="60.0" layoutX="5.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/64e3baa9-5599-43c6-898b-3ad74fe4be51.png" />
                      </image>
                   </ImageView>
+                  <PasswordField fx:id="PfDigitesenha2" layoutX="49.0" layoutY="-2.0" prefHeight="61.0" prefWidth="402.0" promptText="Digite sua senha" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Dubai Medium" size="24.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="txtDigitesuasenha2" layoutX="53.0" prefHeight="66.0" prefWidth="403.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Dubai Medium" size="24.0" />
+                     </font>
+                  </TextField>
                </children>
             </Pane>
             <Button fx:id="buttonCadastro" layoutX="113.0" layoutY="494.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="84.0" prefWidth="721.0" style="-fx-background-radius: 40px; -fx-background-color: linear-gradient(        to bottom,        #FFE08A,        #F7C04F,        #E0A12F    );; -fx-border-radius: 40px; -fx-text-fill: #172B55; -fx-stroke: #D99A2B; -fx-stroke-width: 2px;" text="Cadastrar">
