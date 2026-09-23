@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TelaControleLogin">
    <children>
-      <ImageView fx:id="Tela" fitHeight="1095.0" fitWidth="1924.0" layoutX="-14.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Tela" fitHeight="1095.0" fitWidth="1924.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/ChatGPT%20Image%2028%20de%20ago.%20de%202026,%2019_25_53.png" />
          </image>
@@ -37,7 +37,7 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <TextField fx:id="emailescrever" layoutX="107.0" layoutY="234.0" prefHeight="67.0" prefWidth="499.0" promptText="digite seu e-mail" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 10px;">
+            <TextField fx:id="emailescrever" layoutX="107.0" layoutY="234.0" prefHeight="67.0" prefWidth="499.0" promptText="Digite seu e-mail" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 10px; -fx-text-fill: white;">
                <font>
                   <Font size="20.0" />
                </font></TextField>
@@ -46,11 +46,6 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <PasswordField fx:id="senhaescrever" layoutX="108.0" layoutY="369.0" prefHeight="67.0" prefWidth="499.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-radius: 10px;" />
-            <TextField fx:id="senhaescrever2" layoutX="108.0" layoutY="369.0" prefHeight="67.0" prefWidth="499.0" promptText="Digite sua senha" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 10px;">
-               <font>
-                  <Font size="20.0" />
-               </font></TextField>
             <Text fx:id="login" fill="WHITE" layoutX="109.0" layoutY="837.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ainda não tem uma conta? ">
                <font>
                   <Font size="25.0" />
@@ -61,7 +56,7 @@
                   <Font size="25.0" />
                </font>
             </Hyperlink>
-            <Button fx:id="Entrarbotton" layoutX="108.0" layoutY="543.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="499.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient( to right, #e5c483,#cfa555,#ac7721);" text="Entrar">
+            <Button fx:id="Entrarbotton" layoutX="108.0" layoutY="543.0" mnemonicParsing="false" onAction="#entrar" prefHeight="67.0" prefWidth="499.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient( to right, #e5c483,#cfa555,#ac7721);" text="Entrar">
                <font>
                   <Font size="30.0" />
                </font>
@@ -76,20 +71,25 @@
                   <Font size="25.0" />
                </font>
             </Hyperlink>
-            <Button fx:id="buttongoogle" layoutX="152.0" layoutY="702.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="366.0" style="-fx-background-radius: 8; -fx-border-color: white; -fx-background-color: transparent; -fx-border-radius: 10;">
-               <graphic>
-                  <ImageView fx:id="imagemgoogle" fitHeight="69.0" fitWidth="147.0" onMouseClicked="#EntrarComoGoogle" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../imagens/Google-Logo-Photoroom.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            <ImageView fx:id="imagemgoogle" fitHeight="83.0" fitWidth="159.0" layoutX="250.0" layoutY="689.0" onMouseClicked="#EntrarComoGoogle" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/Google-Logo-Photoroom.png" />
+               </image>
+            </ImageView>
             <CheckBox fx:id="checkbox" layoutX="112.0" layoutY="450.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="183.0" text="Mostrar senha" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </CheckBox>
+            <PasswordField fx:id="senhaescrever" layoutX="108.0" layoutY="370.0" prefHeight="67.0" prefWidth="499.0" promptText="Digite sua senha" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-radius: 10px; -fx-text-fill: white;">
+               <font>
+                  <Font size="20.0" />
+               </font></PasswordField>
+            <TextField fx:id="senhaescrever2" layoutX="108.0" layoutY="370.0" prefHeight="67.0" prefWidth="499.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 10px; -fx-text-fill: white;" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
          </children>
          <opaqueInsets>
             <Insets top="5.0" />

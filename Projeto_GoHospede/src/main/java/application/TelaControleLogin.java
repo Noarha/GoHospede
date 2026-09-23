@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -23,6 +24,9 @@ public class TelaControleLogin {
 
     @FXML
     private Button Entrarbotton;
+    
+    @FXML
+    private CheckBox checkbox;
 
     @FXML
     private ImageView Tela;
@@ -59,6 +63,31 @@ public class TelaControleLogin {
 
     @FXML
     private TextField senhaescrever2;
+    
+    public static boolean validarSenhaSegura(String senha) {
+    	if (senha == null || senha.isEmpty()) {
+    		return false;
+    	}
+    	if(senha.length()<8) {
+    		return false;
+    	}
+    	if(senha.contains(" ")) {
+    		return false;
+    	}
+    	if(!senha.matches(".*[a-z].*")) {
+    		return false;
+    	}
+    	if(!senha.matches(".*[A-Z].*")) {
+    		return false;
+    	}
+    	if(!senha.matches(".*[0-9].*")) {
+    		return false;
+    	}
+    	if(!senha.matches(".*[.!@#$%&*()?/<>_=\\-].*")) {
+    		return false;
+    	}
+    	return true;
+    }
 
     @FXML
     void EntrarComoGoogle(MouseEvent event) {
@@ -128,6 +157,64 @@ public class TelaControleLogin {
     @FXML
     void entrar(ActionEvent event) {
 
-    }
+        String email = emailescrever.getText().trim();
+        String senha = senhaescrever.getText();
 
+
+        if (email.isEmpty() || senha.isEmpty()) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro no Login");
+            alert.setHeaderText(null);
+            alert.setContentText(
+                "E-mail e senha não podem ficar vazios."
+            );
+
+            alert.showAndWait();
+            return;
+        }
+
+        if (!email.matches(
+            "[A-Za-z0-9.%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        )) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro no Login");
+            alert.setHeaderText(null);
+            alert.setContentText("E-mail inválido!");
+            alert.showAndWait();
+
+            emailescrever.requestFocus();
+            return;
+        }
+
+        if (!validarSenhaSegura(senha)) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro no Login");
+            alert.setHeaderText(null);
+            alert.setContentText(
+                "Senha inválida!\n\n"
+                + "A senha deve conter:\n"
+                + "- Pelo menos 8 caracteres\n"
+                + "- Uma letra maiúscula\n"
+                + "- Uma letra minúscula\n"
+                + "- Um número\n"
+                + "- Um caractere especial"
+            );
+
+            alert.showAndWait();
+            senhaescrever.requestFocus();
+            return;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Login");
+        alert.setHeaderText("Login realizado!");
+        alert.setContentText(
+            "E-mail e senha foram validados com sucesso."
+        );
+
+        alert.showAndWait();
+    }
 }
