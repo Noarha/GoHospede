@@ -41,6 +41,10 @@
                <font>
                   <Font size="20.0" />
                </font></TextField>
+            <PasswordField fx:id="senhaescrever" layoutX="108.0" layoutY="370.0" prefHeight="67.0" prefWidth="499.0" promptText="Digite sua senha" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-radius: 10px; -fx-text-fill: white;">
+               <font>
+                  <Font size="20.0" />
+               </font></PasswordField>
             <Text fx:id="senha" fill="WHITE" layoutX="96.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="179.503173828125">
                <font>
                   <Font size="30.0" />
@@ -76,15 +80,11 @@
                   <Image url="@../imagens/Google-Logo-Photoroom.png" />
                </image>
             </ImageView>
-            <CheckBox fx:id="checkbox" layoutX="112.0" layoutY="450.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="183.0" text="Mostrar senha" textFill="WHITE">
+            <CheckBox fx:id="checkbox" layoutX="112.0" layoutY="450.0" mnemonicParsing="false" onAction="#mostrarSenha" prefHeight="40.0" prefWidth="183.0" text="Mostrar senha" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </CheckBox>
-            <PasswordField fx:id="senhaescrever" layoutX="108.0" layoutY="370.0" prefHeight="67.0" prefWidth="499.0" promptText="Digite sua senha" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-radius: 10px; -fx-text-fill: white;">
-               <font>
-                  <Font size="20.0" />
-               </font></PasswordField>
             <TextField fx:id="senhaescrever2" layoutX="108.0" layoutY="370.0" prefHeight="67.0" prefWidth="499.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 10px; -fx-text-fill: white;" visible="false">
                <font>
                   <Font size="20.0" />
@@ -102,7 +102,7 @@
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink layoutX="608.0" layoutY="134.0" text="Sobre Nós" textFill="WHITE">
+            <Hyperlink fx:id="hiperSobrenos" layoutX="608.0" layoutY="134.0" onAction="#AbrirSobrenos" text="Sobre Nós" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
@@ -112,7 +112,7 @@
                   <Font size="40.0" />
                </font>
             </Hyperlink>
-            <Hyperlink layoutX="1091.0" layoutY="128.0" text="Destinos" textFill="WHITE">
+            <Hyperlink fx:id="hiperdestinos" layoutX="1091.0" layoutY="128.0" onAction="#AbrirDestinos" text="Destinos" textFill="WHITE">
                <font>
                   <Font size="40.0" />
                </font>

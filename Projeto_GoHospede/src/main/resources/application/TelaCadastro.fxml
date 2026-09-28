@@ -95,7 +95,7 @@
                   </TextField>
                   <ImageView fitHeight="62.0" fitWidth="44.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../imagens/imagem%20CPF.jpeg" />
+                        <Image url="@../imagens/Imagem%20CPF.png" />
                      </image>
                   </ImageView>
                </children>

@@ -6,6 +6,7 @@ import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -57,6 +58,12 @@ public class TelaControleLogin {
 
     @FXML
     private Text senha;
+    
+    @FXML
+    private Hyperlink hiperdestinos;
+    
+    @FXML
+    private Hyperlink hiperSobrenos;
 
     @FXML
     private PasswordField senhaescrever;
@@ -87,6 +94,41 @@ public class TelaControleLogin {
     		return false;
     	}
     	return true;
+    }
+    
+    @FXML
+    private void entrar(ActionEvent event) {
+    	String email = emailescrever.getText();
+    	String senha = senhaescrever.getText();
+    
+    	if (email.isEmpty()||senha.isEmpty()) {
+    		Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Campos Obrigatórios");
+            alert.setContentText("Informe o email e a senha");
+            alert.showAndWait();
+            return;
+    	}
+    	Usuario usuarioEncontrado = ArquivoUsuario.fazerLogin(email, senha);
+    	if(usuarioEncontrado !=null) {
+    		Parent root;
+			try {
+				root = FXMLLoader.load(getClass().getResource("/application/TelaInicio.fxml"));
+				Scene scene = new Scene(root);
+	    		Stage janela = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	    		janela.setScene(scene);
+	    		janela.setTitle("Tela Principal");
+	    		janela.centerOnScreen();
+	    		janela.show();
+			} catch (Exception e) {
+				e.getMessage();
+			}
+    	}else {
+    		Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Login inválido");
+            alert.setContentText("e-mail ou senha inválido");
+            alert.showAndWait();
+    	}
+
     }
 
     @FXML
@@ -153,68 +195,54 @@ public class TelaControleLogin {
             mostrarErro("Não foi possível carregar a tela de cadastro: " + e.getMessage());
         }
     }
-        
+   
     @FXML
-    void entrar(ActionEvent event) {
+    void mostrarSenha(ActionEvent event) {
 
-        String email = emailescrever.getText().trim();
-        String senha = senhaescrever.getText();
+    	    if (checkbox.isSelected()) {
+    	        senhaescrever2.setText(senhaescrever.getText());
 
+    	        senhaescrever.setVisible(false);
+    	        senhaescrever.setManaged(false);
 
-        if (email.isEmpty() || senha.isEmpty()) {
+    	        senhaescrever2.setVisible(true);
+    	        senhaescrever2.setManaged(true);
 
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro no Login");
-            alert.setHeaderText(null);
-            alert.setContentText(
-                "E-mail e senha não podem ficar vazios."
-            );
+    	    } else {
+    	        senhaescrever.setText(senhaescrever2.getText());
 
-            alert.showAndWait();
-            return;
-        }
+    	        senhaescrever2.setVisible(false);
+    	        senhaescrever2.setManaged(false);
 
-        if (!email.matches(
-            "[A-Za-z0-9.%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        )) {
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro no Login");
-            alert.setHeaderText(null);
-            alert.setContentText("E-mail inválido!");
-            alert.showAndWait();
-
-            emailescrever.requestFocus();
-            return;
-        }
-
-        if (!validarSenhaSegura(senha)) {
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erro no Login");
-            alert.setHeaderText(null);
-            alert.setContentText(
-                "Senha inválida!\n\n"
-                + "A senha deve conter:\n"
-                + "- Pelo menos 8 caracteres\n"
-                + "- Uma letra maiúscula\n"
-                + "- Uma letra minúscula\n"
-                + "- Um número\n"
-                + "- Um caractere especial"
-            );
-
-            alert.showAndWait();
-            senhaescrever.requestFocus();
-            return;
-        }
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Login");
-        alert.setHeaderText("Login realizado!");
-        alert.setContentText(
-            "E-mail e senha foram validados com sucesso."
-        );
-
-        alert.showAndWait();
+    	        senhaescrever.setVisible(true);
+    	        senhaescrever.setManaged(true);
+    	    }
     }
+    
+
+    @FXML
+    void AbrirDestinos(ActionEvent event) {
+    	try {
+            Parent root = FXMLLoader.load(getClass().getResource("/application/destinos.fxml"));
+            Stage stage = (Stage) cadastros.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarErro("Não foi possível carregar a tela destinos: " + e.getMessage());
+        }
+    }
+    @FXML
+    void AbrirSobrenos(ActionEvent event) {
+    	try {
+            Parent root = FXMLLoader.load(getClass().getResource("/application/sobrenos.fxml"));
+            Stage stage = (Stage) cadastros.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarErro("Não foi possível carregar a tela Sobre Nós: " + e.getMessage());
+
+    }	
+ }
 }
