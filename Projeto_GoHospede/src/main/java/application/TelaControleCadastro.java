@@ -3,6 +3,10 @@ package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -14,6 +18,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -208,7 +214,7 @@ public class TelaControleCadastro {
        	String nascimento = data.format(formato);
         String senha = PfDigitesenha1.getText().strip();
         String confirmarSenha = PfDigitesenha2.getText().strip();
-        String cpf = txtcpf.getText().strip();
+        String cpf = txtcpf.getText().strip();;
     	String cpflimpo = txtcpf.getText().strip().replaceAll("[.-]","");
 
 
@@ -217,6 +223,7 @@ public class TelaControleCadastro {
             telefone.isEmpty() ||
             nascimento.isEmpty() ||
             senha.isEmpty() ||
+            cpf.isEmpty() ||
             confirmarSenha.isEmpty()) {
 
     		Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -232,10 +239,26 @@ public class TelaControleCadastro {
     				if(val.isCPF(cpflimpo)) {
     					if(validarSenhaSegura(senha)) {
     						if(senha.equals(confirmarSenha)) {
-    							Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        			    		alert.setTitle("Cadastro");
-        			    		alert.setContentText("Cadastro realizado com sucesso!");
-        			    		alert.showAndWait();
+    							Usuario usuario = new Usuario (nome, cpf, email, nascimento, telefone, senha);
+    	                        boolean cadastrado = ArquivoUsuario.cadastrar(usuario);
+    	                        if (cadastrado) {
+        	                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        	                        alert.setTitle("Cadastro realizado");
+        	                        alert.setContentText("Usuario casdastrado com sucesso");
+        	                        alert.showAndWait();
+        	            			try {
+        	            				Parent root = FXMLLoader.load(getClass().getResource("/application/TelaLogin.fxml"));
+        	            				Scene scene = new Scene(root);
+        	            	    		Stage janela = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        	            	    		janela.setScene(scene);
+        	            	    		janela.setTitle("Tela Login");
+        	            	    		janela.centerOnScreen();
+        	            	    		janela.show();
+        	            			} catch (Exception e) {
+        	            				System.out.println(e.getMessage());
+        	                        	
+        	                        }
+    	                        }
     						}else {
         						Alert alert = new Alert(Alert.AlertType.ERROR);
         			    		alert.setTitle("Erro no Cadastro");

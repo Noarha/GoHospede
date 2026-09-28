@@ -6,10 +6,12 @@ import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -23,6 +25,9 @@ public class TelaControleLogin {
 
     @FXML
     private Button Entrarbotton;
+    
+    @FXML
+    private CheckBox checkbox;
 
     @FXML
     private ImageView Tela;
@@ -53,12 +58,78 @@ public class TelaControleLogin {
 
     @FXML
     private Text senha;
+    
+    @FXML
+    private Hyperlink hiperdestinos;
+    
+    @FXML
+    private Hyperlink hiperSobrenos;
 
     @FXML
     private PasswordField senhaescrever;
 
     @FXML
     private TextField senhaescrever2;
+    
+    public static boolean validarSenhaSegura(String senha) {
+    	if (senha == null || senha.isEmpty()) {
+    		return false;
+    	}
+    	if(senha.length()<8) {
+    		return false;
+    	}
+    	if(senha.contains(" ")) {
+    		return false;
+    	}
+    	if(!senha.matches(".*[a-z].*")) {
+    		return false;
+    	}
+    	if(!senha.matches(".*[A-Z].*")) {
+    		return false;
+    	}
+    	if(!senha.matches(".*[0-9].*")) {
+    		return false;
+    	}
+    	if(!senha.matches(".*[.!@#$%&*()?/<>_=\\-].*")) {
+    		return false;
+    	}
+    	return true;
+    }
+    
+    @FXML
+    private void entrar(ActionEvent event) {
+    	String email = emailescrever.getText();
+    	String senha = senhaescrever.getText();
+    
+    	if (email.isEmpty()||senha.isEmpty()) {
+    		Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Campos Obrigatórios");
+            alert.setContentText("Informe o email e a senha");
+            alert.showAndWait();
+            return;
+    	}
+    	Usuario usuarioEncontrado = ArquivoUsuario.fazerLogin(email, senha);
+    	if(usuarioEncontrado !=null) {
+    		Parent root;
+			try {
+				root = FXMLLoader.load(getClass().getResource("/application/TelaInicio.fxml"));
+				Scene scene = new Scene(root);
+	    		Stage janela = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	    		janela.setScene(scene);
+	    		janela.setTitle("Tela Principal");
+	    		janela.centerOnScreen();
+	    		janela.show();
+			} catch (Exception e) {
+				e.getMessage();
+			}
+    	}else {
+    		Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Login inválido");
+            alert.setContentText("e-mail ou senha inválido");
+            alert.showAndWait();
+    	}
+
+    }
 
     @FXML
     void EntrarComoGoogle(MouseEvent event) {
@@ -124,10 +195,54 @@ public class TelaControleLogin {
             mostrarErro("Não foi possível carregar a tela de cadastro: " + e.getMessage());
         }
     }
-        
+   
     @FXML
-    void entrar(ActionEvent event) {
+    void mostrarSenha(ActionEvent event) {
 
+    	    if (checkbox.isSelected()) {
+    	        senhaescrever2.setText(senhaescrever.getText());
+
+    	        senhaescrever.setVisible(false);
+    	        senhaescrever.setManaged(false);
+
+    	        senhaescrever2.setVisible(true);
+    	        senhaescrever2.setManaged(true);
+
+    	    } else {
+    	        senhaescrever.setText(senhaescrever2.getText());
+
+    	        senhaescrever2.setVisible(false);
+    	        senhaescrever2.setManaged(false);
+
+    	        senhaescrever.setVisible(true);
+    	        senhaescrever.setManaged(true);
+    	    }
     }
+    
 
+    @FXML
+    void AbrirDestinos(ActionEvent event) {
+    	try {
+            Parent root = FXMLLoader.load(getClass().getResource("/application/destinos.fxml"));
+            Stage stage = (Stage) cadastros.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarErro("Não foi possível carregar a tela destinos: " + e.getMessage());
+        }
+    }
+    @FXML
+    void AbrirSobrenos(ActionEvent event) {
+    	try {
+            Parent root = FXMLLoader.load(getClass().getResource("/application/sobrenos.fxml"));
+            Stage stage = (Stage) cadastros.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarErro("Não foi possível carregar a tela Sobre Nós: " + e.getMessage());
+
+    }	
+ }
 }
