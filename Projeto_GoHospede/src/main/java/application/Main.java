@@ -10,7 +10,7 @@ public class Main extends Application {
     
     @Override
     public void start(Stage janela) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/application/telaLogin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/application/telapraiafortaleza.fxml"));
         Scene cena = new Scene(root,1920,1080); 
         janela.setScene(cena);
         janela.setTitle("Tela Senac");

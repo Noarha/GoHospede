@@ -113,6 +113,8 @@ public class TelaControleInicio {
                     "Jericoacara",
                     "Guaramiranga"
                     );
+    
+    
 	public void initialize() { 
 		 lblmenuinicio.setStyle("-fx-text-fill: #0078D7;");
 		paineldestinos.setVisible(false);
