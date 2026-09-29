@@ -64,6 +64,9 @@ public class TelaControleLogin {
     
     @FXML
     private Hyperlink hiperSobrenos;
+    
+    @FXML
+    private Hyperlink Hiperserviços;
 
     @FXML
     private PasswordField senhaescrever;
@@ -245,4 +248,17 @@ public class TelaControleLogin {
 
     }	
  }
-}
+    @FXML
+    void AbrirServiços(ActionEvent event) {
+    	try {
+            Parent root = FXMLLoader.load(getClass().getResource("/application/Servico.fxml"));
+            Stage stage = (Stage) Hiperserviços.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+    }	
+ }
+    }
+

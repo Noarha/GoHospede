@@ -20,6 +20,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -31,7 +32,7 @@ public class TelaControleCadastro {
     private CheckBox CheckBox;
 
     @FXML
-    private Hyperlink Entrar;
+    private Hyperlink hiperentrar;
 
     @FXML
     private Hyperlink PoliticaPri;
@@ -303,4 +304,16 @@ public class TelaControleCadastro {
             return;
         }
     }
+    @FXML
+    void abrirlogin(ActionEvent event) {
+    	try {
+            Parent root = FXMLLoader.load(getClass().getResource("/application/TelaLogin.fxml"));
+            Stage stage = (Stage) hiperentrar.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+    }
+}
 }

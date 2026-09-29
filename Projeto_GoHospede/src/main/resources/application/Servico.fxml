@@ -112,12 +112,12 @@
       </Pane>
       <Pane fx:id="panesuperior" layoutX="-8.0" layoutY="-138.0" prefHeight="200.0" prefWidth="1928.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="1018.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-138.0">
          <children>
-            <Hyperlink fx:id="hyperinicio" layoutX="444.0" layoutY="134.0" text="Início" textFill="WHITE">
+            <Hyperlink fx:id="hyperinicio" layoutX="444.0" layoutY="134.0" onAction="#AbrirTelainicio" text="Início" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="hypersobrenos" layoutX="608.0" layoutY="134.0" text="Sobre Nós" textFill="WHITE">
+            <Hyperlink fx:id="hypersobrenos" layoutX="608.0" layoutY="134.0" onAction="#AbrirTelaSobrenos" text="Sobre Nós" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>

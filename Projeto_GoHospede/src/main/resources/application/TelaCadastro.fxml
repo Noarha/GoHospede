@@ -23,6 +23,11 @@
       </ImageView>
       <Pane fx:id="pane" layoutX="498.0" layoutY="446.0" prefHeight="620.0" prefWidth="980.0" style="-fx-background-radius: 20; -fx-background-color: rgba(255,255,255,0.15); -fx-background-insets: 0; -fx-effect: dropsshadow(gaussian,one-pass-box,0,0.35,20,0); -fx-background-radius: 20; -fx-border-width: 1; -fx-border-color: gold; -fx-border-radius: 40;">
          <children>
+            <Hyperlink fx:id="hiperentrar" layoutX="475.0" layoutY="576.0" onAction="#abrirlogin" text="Entrar" textFill="DARKGOLDENROD">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Hyperlink>
             <Text fx:id="text" fill="#152075" layoutX="329.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crie sua conta" wrappingWidth="353.1500244140625">
                <font>
                   <Font name="Dubai Medium" size="49.0" />
@@ -178,11 +183,6 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <Hyperlink fx:id="Entrar" layoutX="475.0" layoutY="576.0" text="Entrar" textFill="DARKGOLDENROD">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Hyperlink>
             <CheckBox fx:id="Mostrarsenha" layoutX="811.0" layoutY="365.0" mnemonicParsing="false" text="Mostrar senha" textFill="#152075">
                <font>
                   <Font size="18.0" />
