@@ -63,19 +63,19 @@
             </Label>
          </children>
       </Pane>
-      <Label layoutX="601.0" layoutY="124.0" text="HOTÉIS NA" textFill="WHITE">
+      <Label layoutX="471.0" layoutY="123.0" text="HOTÉIS NAS" textFill="WHITE">
          <font>
             <Font name="Georgia Bold" size="58.0" />
          </font>
       </Label>
-      <Label layoutX="991.0" layoutY="122.0" text="CIDADES DOS SONHOS" textFill="#e5a11b">
+      <Label layoutX="878.0" layoutY="122.0" text="CIDADES DOS SONHOS" textFill="#e5a11b">
          <font>
             <Font name="Georgia Bold" size="58.0" />
          </font>
       </Label>
-      <Label layoutX="776.0" layoutY="186.0" text="Encontre o hotel ideal para sua estadia" textFill="WHITE">
+      <Label layoutX="753.0" layoutY="189.0" text="Encontre o hotel ideal para sua estadia" textFill="WHITE">
          <font>
-            <Font size="26.0" />
+            <Font name="Trebuchet MS" size="28.0" />
          </font>
       </Label>
       <Pane layoutX="417.0" layoutY="250.0" opacity="0.83" prefHeight="87.0" prefWidth="1200.0" style="-fx-background-color: black; -fx-background-radius: 10px;">
