@@ -111,6 +111,16 @@
                   <Font size="35.0" />
                </font>
             </Hyperlink>
+            <Hyperlink fx:id="hiperLogin" layoutX="1702.0" layoutY="138.0" onAction="#AbrirLogin" prefHeight="46.0" prefWidth="219.0" text="FAZER LOGIN" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="62.0" fitWidth="66.0" layoutX="1653.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/login%20fundo%20preto.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <Pane fx:id="paneinferior" layoutX="-8.0" layoutY="990.0" prefHeight="92.0" prefWidth="1930.0" style="-fx-background-color: black;">

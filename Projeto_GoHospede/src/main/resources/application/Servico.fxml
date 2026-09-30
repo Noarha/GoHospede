@@ -16,97 +16,97 @@
             <Image url="@../imagens/ChatGPT%20Image%2028%20de%20ago.%20de%202026,%2019_25_53.png" />
          </image>
       </ImageView>
-      <Pane fx:id="paneservico" layoutX="1104.0" layoutY="188.0" prefHeight="731.0" prefWidth="674.0" style="-fx-border-radius: 10; -fx-background-radius: 10px; -fx-background-color: #4a4a4a; -fx-border-color: white;">
+      <Pane fx:id="paneservico" layoutX="1104.0" layoutY="114.0" prefHeight="805.0" prefWidth="674.0" style="-fx-border-radius: 10; -fx-background-radius: 10px; -fx-background-color: #4a4a4a; -fx-border-color: white;">
          <children>
             <Text fx:id="txtservico" fill="WHITE" layoutX="51.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serviço">
                <font>
                   <Font size="40.0" />
                </font>
             </Text>
-            <Text fx:id="txtreserva" fill="#eab766" layoutX="142.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservas de Hospedagem">
+            <Text fx:id="txtreserva" fill="#eab766" layoutX="142.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospedagem">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtsolucoes" fill="WHITE" layoutX="46.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soluções completas para tornar sua experiência de viagem simples, segura e inesquecível." wrappingWidth="597.04248046875">
+            <Text fx:id="txtsolucoes" fill="WHITE" layoutX="46.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mais que uma hospedagem, uma experiência feita para você." wrappingWidth="597.04248046875">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtasmelhores" fill="WHITE" layoutX="142.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="As melhores opções de hotéis e pousadas comreserva rápida e segura" wrappingWidth="431.55078125">
+            <Text fx:id="txtasmelhores" fill="WHITE" layoutX="142.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ambientes cuidadosamente preparados para proporcionar bem-estar, tranquilidade e momentos de descanso durante toda a sua estadia." wrappingWidth="431.55078125">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="txtplanejamento" fill="#eab766" layoutX="142.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planejamento de Viagens">
+            <Text fx:id="txtplanejamento" fill="#eab766" layoutX="142.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planejamento de Viagens">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtmontamos" fill="WHITE" layoutX="142.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Montamos o roteiro ideal para você aproveitar cada momento ao máximo." wrappingWidth="510.9765625">
+            <Text fx:id="txtmontamos" fill="WHITE" layoutX="142.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Montamos o roteiro ideal para você aproveitar cada momento ao máximo." wrappingWidth="510.9765625">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="txttransfers" fill="#eab766" layoutX="142.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfers e Transportes">
+            <Text fx:id="txttransfers" fill="#eab766" layoutX="142.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfers e Transportes">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txttraslados" fill="WHITE" layoutX="142.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Traslados confortáveis e seguros paraqualquer destino." wrappingWidth="510.9765625">
+            <Text fx:id="txttraslados" fill="WHITE" layoutX="141.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Traslados confortáveis e seguros para qualquer destino." wrappingWidth="510.9765625">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="txtexperiencias" fill="#eab766" layoutX="142.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experiências Exclusivas">
+            <Text fx:id="txtexperiencias" fill="#eab766" layoutX="142.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experiências Exclusivas">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtatividade" fill="WHITE" layoutX="142.0" layoutY="557.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atividades e passeios selecionados paravocê viver o melhor de cada lugar." wrappingWidth="510.9765625">
+            <Text fx:id="txtatividade" fill="WHITE" layoutX="142.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atividades e passeios selecionados para você viver o melhor de cada lugar." wrappingWidth="510.9765625">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="txtsuporte" fill="#eab766" layoutX="142.0" layoutY="632.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suporte 24H">
+            <Text fx:id="txtsuporte" fill="#eab766" layoutX="142.0" layoutY="702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suporte 24H">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtestamossempre" fill="WHITE" layoutX="142.0" layoutY="661.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estamos sempre disponíveis para ajudarvocê, antes, durante e depois da viagem." wrappingWidth="510.9765625">
+            <Text fx:id="txtestamossempre" fill="WHITE" layoutX="142.0" layoutY="739.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estamos sempre disponíveis para ajudarvocê, antes, durante e depois da viagem." wrappingWidth="510.9765625">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <ImageView fx:id="imgcama" fitHeight="86.0" fitWidth="92.0" layoutX="43.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgcama" fitHeight="86.0" fitWidth="92.0" layoutX="43.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT_Image_3_09_2026__18_48_33-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgcalendario" fitHeight="86.0" fitWidth="92.0" layoutX="46.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgcalendario" fitHeight="86.0" fitWidth="92.0" layoutX="46.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT_Image_3_09_2026__18_53_20-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgcarro" fitHeight="86.0" fitWidth="92.0" layoutX="45.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgcarro" fitHeight="86.0" fitWidth="92.0" layoutX="45.0" layoutY="448.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT_Image_3_09_2026__18_55_20-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgbandeja" fitHeight="86.0" fitWidth="92.0" layoutX="46.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgbandeja" fitHeight="86.0" fitWidth="92.0" layoutX="46.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT_Image_3_09_2026__19_04_28-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgfone" fitHeight="86.0" fitWidth="92.0" layoutX="47.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgfone" fitHeight="86.0" fitWidth="92.0" layoutX="47.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT_Image_3_09_2026__19_14_17-removebg-preview.png" />
                </image>
             </ImageView>
-            <Line fx:id="line1" endX="448.6666259765625" layoutX="186.0" layoutY="292.0" startX="-140.0" startY="1.0" stroke="#f2b927" />
-            <Line fx:id="line2" endX="448.6666259765625" layoutX="186.0" layoutY="391.0" startX="-140.0" startY="1.0" stroke="#f2b927" />
-            <Line fx:id="line3" endX="448.6666259765625" layoutX="186.0" layoutY="494.0" startX="-140.0" startY="1.0" stroke="#f2b927" />
-            <Line fx:id="line4" endX="448.6666259765625" layoutX="186.0" layoutY="603.0" startX="-140.0" startY="1.0" stroke="#f2b927" />
+            <Line fx:id="line1" endX="448.6666259765625" layoutX="186.0" layoutY="305.0" startX="-140.0" startY="1.0" stroke="#f2b927" />
+            <Line fx:id="line2" endX="448.6666259765625" layoutX="186.0" layoutY="426.0" startX="-140.0" startY="1.0" stroke="#f2b927" />
+            <Line fx:id="line3" endX="448.6666259765625" layoutX="186.0" layoutY="544.0" startX="-140.0" startY="1.0" stroke="#f2b927" />
+            <Line fx:id="line4" endX="448.6666259765625" layoutX="186.0" layoutY="665.0" startX="-140.0" startY="1.0" stroke="#f2b927" />
             <Line fx:id="line5" endX="-90.0" endY="1.0" layoutX="194.0" layoutY="78.0" startX="-140.0" startY="1.0" stroke="#f2b927" />
          </children>
       </Pane>
@@ -137,6 +137,16 @@
                   <Font size="35.0" />
                </font>
             </Hyperlink>
+            <Hyperlink fx:id="hiperLogin" layoutX="1670.0" layoutY="139.0" onAction="#AbrirLogin" prefHeight="43.0" prefWidth="216.0" text="FAZER LOGIN" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="59.0" fitWidth="69.0" layoutX="1622.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/login%20fundo%20preto.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <Pane layoutX="-2.0" layoutY="1019.0" prefHeight="66.0" prefWidth="1924.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="-5.0" AnchorPane.topAnchor="1019.0">

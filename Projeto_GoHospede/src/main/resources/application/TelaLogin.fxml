@@ -20,7 +20,7 @@
             <Image url="@../imagens/ChatGPT%20Image%2028%20de%20ago.%20de%202026,%2019_25_53.png" />
          </image>
       </ImageView>
-      <Pane fx:id="cadastro" layoutX="1118.0" layoutY="137.0" prefHeight="858.0" prefWidth="660.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 30; -fx-border-radius: Shadow;">
+      <Pane fx:id="cadastro" layoutX="1118.0" layoutY="109.0" prefHeight="858.0" prefWidth="660.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 30; -fx-border-radius: Shadow;">
          <children>
             <Text fx:id="bemvindo" fill="WHITE" layoutX="211.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-Vindo!" wrappingWidth="246.13671875">
                <font>

@@ -138,6 +138,9 @@ public class servicoTela_Controle {
     private Text txttraslados;
     
     @FXML
+    private Hyperlink hiperLogin;
+    
+    @FXML
     void AbrirTelaSobrenos(ActionEvent event) {
     	try {
             Parent root = FXMLLoader.load(getClass().getResource("/application/sobrenos.fxml"));
@@ -162,8 +165,18 @@ public class servicoTela_Controle {
 
         }
     }
-
+    @FXML
+    void AbrirLogin(ActionEvent event) {
+    	try {
+            Parent root = FXMLLoader.load(getClass().getResource("/application/TelaLogin.fxml"));
+            Stage stage = (Stage) hiperLogin.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
     }
+   }
+}
 
 
 

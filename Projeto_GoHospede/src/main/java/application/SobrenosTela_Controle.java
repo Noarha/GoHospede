@@ -125,6 +125,9 @@ public class SobrenosTela_Controle {
     @FXML
     private Text txtsobrenos;
     
+    @FXML
+    private Hyperlink hiperLogin;
+    
 
     @FXML
     void AbrirTelacontato(ActionEvent event) {
@@ -156,6 +159,18 @@ public class SobrenosTela_Controle {
 
         }
     }
+    @FXML
+    void AbrirLogin(ActionEvent event) {
+	try {
+        Parent root = FXMLLoader.load(getClass().getResource("/application/TelaLogin.fxml"));
+        Stage stage = (Stage) hiperLogin.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    } catch (IOException e) {
+        e.printStackTrace();
+
+    }
+}
 
 }
 
