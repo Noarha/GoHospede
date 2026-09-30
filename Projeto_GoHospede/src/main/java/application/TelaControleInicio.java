@@ -23,8 +23,8 @@ public class TelaControleInicio {
     private Button bntpesquisar;
 
     
-	 @FXML
-	    private Label lblmenudestinos;
+	@FXML
+	private Label lblmenudestinos;
 
     @FXML
     private Label lbldestino;
