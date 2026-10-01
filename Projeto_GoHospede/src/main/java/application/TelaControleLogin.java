@@ -63,6 +63,9 @@ public class TelaControleLogin {
     private Hyperlink hiperdestinos;
     
     @FXML
+    private Hyperlink linkesqueceusenha;
+    
+    @FXML
     private Hyperlink hiperSobrenos;
     
     @FXML

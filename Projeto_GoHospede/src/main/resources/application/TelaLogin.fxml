@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -97,35 +98,19 @@
       </Pane>
       <AnchorPane fx:id="achorpane1" layoutX="-8.0" layoutY="-138.0" prefHeight="200.0" prefWidth="1926.0" style="-fx-background-color: black;">
          <children>
-            <Hyperlink layoutX="444.0" layoutY="145.0" text="Início" textFill="WHITE">
+            <Hyperlink fx:id="hiperSobrenos" layoutX="209.0" layoutY="148.0" onAction="#AbrirSobrenos" text="Sobre Nós" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="hiperSobrenos" layoutX="608.0" layoutY="145.0" onAction="#AbrirSobrenos" text="Sobre Nós" textFill="WHITE">
+            <Hyperlink fx:id="Hiperserviços" layoutX="522.0" layoutY="148.0" onAction="#AbrirServiços" text="Serviços" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="Hiperserviços" layoutX="850.0" layoutY="145.0" onAction="#AbrirServiços" text="Serviços" textFill="WHITE">
+            <Hyperlink fx:id="link" layoutX="818.0" layoutY="148.0" text="Contato" textFill="WHITE">
                <font>
                   <Font size="35.0" />
-               </font>
-            </Hyperlink>
-            <Hyperlink fx:id="hiperdestinos" layoutX="1091.0" layoutY="145.0" onAction="#AbrirDestinos" text="Destinos" textFill="WHITE">
-               <font>
-                  <Font size="35.0" />
-               </font>
-            </Hyperlink>
-            <Hyperlink fx:id="link" layoutX="1310.0" layoutY="145.0" text="Contato" textFill="WHITE">
-               <font>
-                  <Font size="35.0" />
-               </font>
-            </Hyperlink>
-            <TextField fx:id="panelogin" layoutX="1712.0" layoutY="156.0" prefHeight="47.0" prefWidth="201.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10;" />
-            <Hyperlink fx:id="linkfazerlogin" layoutX="1711.0" layoutY="152.0" text="FAZER LOGIN" textFill="WHITE">
-               <font>
-                  <Font size="30.0" />
                </font>
             </Hyperlink>
             <ImageView fitHeight="84.0" fitWidth="72.0" layoutX="1639.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
@@ -133,66 +118,76 @@
                   <Image url="@../../../../../../Downloads/ChatGPT%20Image%2031_08_2026,%2019_44_35.png" />
                </image>
             </ImageView>
+            <Label layoutX="1713.0" layoutY="159.0" text="Hospede" textFill="#d99a24">
+               <font>
+                  <Font name="Georgia" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="1671.0" layoutY="159.0" text="Go" textFill="#fffbfb">
+               <font>
+                  <Font name="Georgia" size="32.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="achorpane2" layoutX="-1.0" layoutY="998.0" prefHeight="82.0" prefWidth="1926.0" style="-fx-background-color: black;">
          <children>
-            <Text fx:id="txtreserva" fill="WHITE" layoutX="143.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservas Seguras">
+            <Text fx:id="txtreserva" fill="WHITE" layoutX="143.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reserva Segura">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtseusdados" fill="#ebebeb" layoutX="143.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seus dados protegidos">
+            <Text fx:id="txtseusdados" fill="#ebebeb" layoutX="142.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seus dados protegidos">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <ImageView fx:id="imgescudo" fitHeight="60.0" fitWidth="95.0" layoutX="52.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgescudo" fitHeight="60.0" fitWidth="95.0" layoutX="63.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT%20Image%2031_08_2026,%2020_01_12-Photoroom-Photoroom.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgfone" fitHeight="72.0" fitWidth="64.0" layoutX="425.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgfone" fitHeight="72.0" fitWidth="64.0" layoutX="504.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT%20Image%201_09_2026,%2018_23_32-Photoroom.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgpreco" fitHeight="72.0" fitWidth="64.0" layoutX="848.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgpreco" fitHeight="72.0" fitWidth="64.0" layoutX="1003.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT%20Image%201_09_2026,%2018_31_00-Photoroom.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgmedalha" fitHeight="73.0" fitWidth="123.0" layoutX="1266.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgmedalha" fitHeight="73.0" fitWidth="123.0" layoutX="1479.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT%20Image%201_09_2026,%2018_23_51-Photoroom.png" />
                </image>
             </ImageView>
-            <Text fx:id="txtatendimento" fill="WHITE" layoutX="487.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atendimento 24H">
+            <Text fx:id="txtatendimento" fill="WHITE" layoutX="569.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atendimento 24H">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtestamos" fill="WHITE" layoutX="492.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estamos sempre disponivel">
+            <Text fx:id="txtestamos" fill="WHITE" layoutX="566.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estamos sempre disponivel">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtmelhores" fill="WHITE" layoutX="917.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Melhores preços">
+            <Text fx:id="txtmelhores" fill="WHITE" layoutX="1075.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Melhor preço para">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtgarantimos" fill="WHITE" layoutX="916.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garantimos o melhor valor">
+            <Text fx:id="txtgarantimos" fill="WHITE" layoutX="1073.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="uma experiência inesquecível">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtexperiencia" fill="WHITE" layoutX="1336.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experiência premium">
+            <Text fx:id="txtexperiencia" fill="WHITE" layoutX="1552.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experiência premium">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtqualidade" fill="WHITE" layoutX="1336.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conforto e qualidade">
+            <Text fx:id="txtqualidade" fill="WHITE" layoutX="1552.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conforto e qualidade">
                <font>
                   <Font size="25.0" />
                </font>
