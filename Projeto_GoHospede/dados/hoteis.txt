@@ -51,3 +51,14 @@ GoHospede Park;Jericoacoara;01/10/2026;31/12/2026;469.00;7
 GoHospede Park;Jericoacoara;01/10/2026;31/12/2026;509.00;8
 GoHospede Park;Jericoacoara;01/10/2026;31/12/2026;549.00;9
 GoHospede Park;Jericoacoara;01/10/2026;31/12/2026;589.00;10
+
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;230.00;1
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;270.00;2
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;310.00;3
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;350.00;4
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;390.00;5
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;430.00;6
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;470.00;7
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;510.00;8
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;550.00;9
+GoHospede Park;Canoa Quebrada;01/10/2026;31/12/2026;590.00;10

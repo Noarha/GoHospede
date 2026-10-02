@@ -214,15 +214,37 @@ public class Tela_Controle_Fortaleza {
         }
 
         carregarHoteis(
+        	    cidade,
+        	    entrada,
+        	    saida,
+        	    hospedes
+        	);
+    }
+    public void receberPesquisa(
+            String cidade,
+            LocalDate entrada,
+            LocalDate saida,
+            Integer hospedes) {
+
+        // Coloca os valores recebidos nos campos da segunda tela
+        combolocal.setValue(cidade);
+        dtEntrada.setValue(entrada);
+        dtSaida.setValue(saida);
+        combohospede.setValue(hospedes);
+
+        // Faz a pesquisa automaticamente
+        carregarHoteis(
             cidade,
             entrada,
-            saida
+            saida,
+            hospedes
         );
     }
     private void carregarHoteis(
             String cidadePesquisa,
             LocalDate entradaPesquisa,
-            LocalDate saidaPesquisa) {
+            LocalDate saidaPesquisa,
+            Integer hospedesPesquisa) {
 
         ObservableList<Hotel> lista =
                 FXCollections.observableArrayList();
@@ -289,7 +311,7 @@ public class Tela_Controle_Fortaleza {
                 if (cidadeIgual
                         && entradaValida
                         && saidaValida
-                        && quartos > 0) {
+                        && quartos >= hospedesPesquisa) {
 
                     Hotel hotel = new Hotel(
                         nome,

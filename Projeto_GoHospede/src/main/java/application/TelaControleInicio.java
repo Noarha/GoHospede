@@ -3,7 +3,12 @@ package application;
 import javafx.scene.input.MouseEvent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -16,6 +21,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 public class TelaControleInicio {
 
@@ -61,7 +70,8 @@ public class TelaControleInicio {
 
     @FXML
     private TextField textdestino;
-
+    @FXML
+    private DatePicker ckechinOUt;
     @FXML
     private Label txtcheckinin;
 
@@ -120,7 +130,8 @@ public class TelaControleInicio {
                     "Cumbuco",
                     "Porto das Dunas",
                     "Jericoacara",
-                    "Guaramiranga"
+                    "Guaramiranga",
+                    "Canoa Quebrada"
                     );
     
     
@@ -262,10 +273,7 @@ public class TelaControleInicio {
 	    	alert.showAndWait();
 	    }
 	    
-	    @FXML
-	    void pesquisarhoteis(MouseEvent event) {
-
-	    }
+	    
 	    @FXML
 	    void destinoguaramiranga(MouseEvent event) {
 	    	Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -301,6 +309,94 @@ public class TelaControleInicio {
 	    	alert.setTitle("destino");
 	    	alert.setContentText("destino guaramiranga");
 	    	alert.showAndWait();
+	    }
+	    @FXML
+	    private void pesquisarHoteis(ActionEvent event) throws IOException {
+
+	        // Pega os dados escolhidos na primeira tela
+	        String destino = combodestino.getValue();
+	        LocalDate entrada = datecheckinin.getValue();
+	        LocalDate saida = ckechinOUt.getValue();
+	        Integer hospedes = spinnerhospede.getValue();
+
+	        // Verifica se o destino foi informado
+	        if (destino == null || destino.trim().isEmpty()) {
+	            Alert alert = new Alert(Alert.AlertType.WARNING);
+	            alert.setTitle("Atenção");
+	            alert.setHeaderText(null);
+	            alert.setContentText("Selecione um destino.");
+	            alert.showAndWait();
+	            return;
+	        }
+
+	        // Verifica a entrada
+	        if (entrada == null) {
+	            Alert alert = new Alert(Alert.AlertType.WARNING);
+	            alert.setTitle("Atenção");
+	            alert.setHeaderText(null);
+	            alert.setContentText("Informe a data de entrada.");
+	            alert.showAndWait();
+	            return;
+	        }
+
+	        // Verifica a saída
+	        if (saida == null) {
+	            Alert alert = new Alert(Alert.AlertType.WARNING);
+	            alert.setTitle("Atenção");
+	            alert.setHeaderText(null);
+	            alert.setContentText("Informe a data de saída.");
+	            alert.showAndWait();
+	            return;
+	        }
+
+	        // Verifica as datas
+	        if (saida.isBefore(entrada) || saida.isEqual(entrada)) {
+	            Alert alert = new Alert(Alert.AlertType.WARNING);
+	            alert.setTitle("Atenção");
+	            alert.setHeaderText(null);
+	            alert.setContentText(
+	                "A data de saída deve ser posterior à data de entrada."
+	            );
+	            alert.showAndWait();
+	            return;
+	        }
+
+	        // Verifica hóspedes
+	        if (hospedes == null || hospedes <= 0) {
+	            Alert alert = new Alert(Alert.AlertType.WARNING);
+	            alert.setTitle("Atenção");
+	            alert.setHeaderText(null);
+	            alert.setContentText("Informe a quantidade de hóspedes.");
+	            alert.showAndWait();
+	            return;
+	        }
+
+	        // Carrega a segunda tela
+	        FXMLLoader loader = new FXMLLoader(
+	            getClass().getResource("/application/telapraiafortaleza.fxml")
+	        );
+
+	        Parent root = loader.load();
+
+	        // Pega o controller da segunda tela
+	        Tela_Controle_Fortaleza controller =
+	            loader.getController();
+
+	        // Envia os dados da primeira tela para a segunda
+	        controller.receberPesquisa(
+	            destino,
+	            entrada,
+	            saida,
+	            hospedes
+	        );
+
+	        // Troca de tela
+	        Stage stage = (Stage) ((Node) event.getSource())
+	            .getScene()
+	            .getWindow();
+
+	        stage.setScene(new Scene(root));
+	        stage.show();
 	    }
 
 	}
