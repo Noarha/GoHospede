@@ -21,7 +21,7 @@
       </ImageView>
       <Pane fx:id="paneblack" layoutX="-1.0" layoutY="-1.0" prefHeight="86.0" prefWidth="1920.0" style="-fx-background-color: black;">
          <children>
-            <Label layoutX="78.0" layoutY="31.0" text="Hospede" textFill="#d99a24">
+            <Label layoutX="77.0" layoutY="31.0" text="Hospede" textFill="#d99a24">
                <font>
                   <Font name="Georgia" size="28.0" />
                </font>

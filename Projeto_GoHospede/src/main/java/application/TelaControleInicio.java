@@ -37,7 +37,8 @@ public class TelaControleInicio {
 
     @FXML
     private ImageView imgcoroa;
-
+    @FXML
+    private ImageView praiafortaleza11;
     @FXML
     private Pane paneblack;
 
@@ -46,6 +47,8 @@ public class TelaControleInicio {
 
     @FXML
     private ImageView praiacumbuco;
+    
+
 
     @FXML
     private ImageView praiafortaleza;
@@ -94,9 +97,15 @@ public class TelaControleInicio {
     private ComboBox<String> combodestino;
     @FXML
     private AnchorPane praiasparte2;
-    @FXML
+   @FXML
     private AnchorPane paineldestinos;
+   @FXML
+   private ImageView guara;
 
+   @FXML
+   private ImageView praiacanoa; 
+   @FXML
+   private ImageView praiajeri;
     private List<AnchorPane> paineis;
     private int painelAtual = 0;
     private void mostrarPainelAtual() {
@@ -167,6 +176,40 @@ public class TelaControleInicio {
         clipCumbuco.setArcHeight(10);
 
         praiacumbuco.setClip(clipCumbuco);
+        
+        
+        
+        praiacanoa.setFitWidth(largura);
+        praiacanoa.setFitHeight(altura);
+        praiacanoa.setPreserveRatio(false);
+
+        Rectangle clipCanoa = new Rectangle(largura, altura);
+        clipCanoa.setArcWidth(10);
+        clipCanoa.setArcHeight(10);
+
+        praiacanoa.setClip(clipCanoa);
+        
+        
+        praiajeri.setFitWidth(largura);
+        praiajeri.setFitHeight(altura);
+        praiajeri.setPreserveRatio(false);
+
+        Rectangle clipJeri = new Rectangle(largura, altura);
+        clipJeri.setArcWidth(10);
+        clipJeri.setArcHeight(10);
+
+        praiajeri.setClip(clipJeri);
+        
+        
+        guara.setFitWidth(largura);
+        guara.setFitHeight(altura);
+        guara.setPreserveRatio(false);
+
+        Rectangle clipGuara = new Rectangle(largura, altura);
+        clipGuara.setArcWidth(10);
+        clipGuara.setArcHeight(10);
+
+        guara.setClip(clipGuara);
         
         praiaporto.setFitWidth(largura);
         praiaporto.setFitHeight(altura);
@@ -252,6 +295,12 @@ public class TelaControleInicio {
 	    	painelinicio.setVisible(false);
 	    	paineldestinos.setVisible(true);
 	    }
-	   
+	    @FXML
+	    void destinocanoa(MouseEvent event) {
+	    	Alert alert = new Alert(Alert.AlertType.INFORMATION);
+	    	alert.setTitle("destino");
+	    	alert.setContentText("destino guaramiranga");
+	    	alert.showAndWait();
+	    }
 
 	}
