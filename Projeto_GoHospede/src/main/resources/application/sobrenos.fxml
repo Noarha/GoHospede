@@ -18,14 +18,14 @@
       </ImageView>
       <Pane fx:id="panesobrenos" layoutX="1150.0" layoutY="102.0" prefHeight="814.0" prefWidth="654.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 20px;">
          <children>
-            <Text fx:id="txtsobrenos" fill="WHITE" layoutX="29.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobre nós" wrappingWidth="327.0">
+            <Text fx:id="txtsobrenos" fill="WHITE" layoutX="29.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobre nós" wrappingWidth="327.0">
                <font>
                   <Font size="50.0" />
                </font>
             </Text>
-            <Text fx:id="txtgohospede" fill="WHITE" layoutX="36.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A GoHospede nasceu com o propósito de transformara forma como você se hospeda. Somos mais que uma plataforma de reservas — somos seus parceiros emcada viagem, oferecendo conforto, segurança e experiências memoráveis." wrappingWidth="427.72900390625">
+            <Text fx:id="txtgohospede" fill="WHITE" layoutX="33.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A GoHospede nasceu para transformar a forma como as pessoas vivem uma estadia. Acreditamos que um hotel não é apenas um lugar para dormir. É onde uma viagem começa, onde momentos são vividos e onde cada detalhe pode fazer a diferença. Por isso, colocamos as pessoas no centro de tudo. criamos experiências que unem conforto, hospitalidade, cuidado e respeito, proporcionando aos nossos hóspedes a sensação de serem verdadeiramente acolhidos." textAlignment="JUSTIFY" wrappingWidth="593.72900390625">
                <font>
-                  <Font size="25.0" />
+                  <Font size="23.0" />
                </font>
             </Text>
             <ImageView fx:id="imgescudo1" fitHeight="103.0" fitWidth="112.0" layoutX="-7.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
@@ -46,7 +46,7 @@
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="txtoferecer" fill="WHITE" layoutX="81.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oferecer as melhores opções de hospedagem com praticidade, confiança e atendimento de excelência." wrappingWidth="583.46337890625">
+            <Text fx:id="txtoferecer" fill="WHITE" layoutX="81.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuidade de cada hóspede como único - Fazendo com que cada estadia seja especial." wrappingWidth="583.46337890625">
                <font>
                   <Font size="22.0" />
                </font>
@@ -72,7 +72,7 @@
                </font>
             </Text>
             <Line fx:id="linedourada1" endX="453.6666259765625" layoutX="183.0" layoutY="698.0" startX="-160.3333740234375" stroke="#ffb700" />
-            <Line fx:id="linedourada2" endX="164.33334350585938" endY="-10.66668701171875" layoutX="-70.0" layoutY="91.0" startX="105.33331298828125" startY="-10.66668701171875" stroke="#ffb700" />
+            <Line fx:id="linedourada2" endX="164.33334350585938" endY="-10.66668701171875" layoutX="-70.0" layoutY="76.0" startX="105.33331298828125" startY="-10.66668701171875" stroke="#ffb700" />
             <ImageView fx:id="imgpessoas" fitHeight="65.0" fitWidth="112.0" layoutX="80.0" layoutY="712.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/ChatGPT_Image_23_09_2026__18_46_09-removebg-preview%20(1).png" />
@@ -86,7 +86,7 @@
          </children></Pane>
       <Pane fx:id="panesuperior" layoutX="-8.0" layoutY="-134.0" prefHeight="200.0" prefWidth="1930.0" style="-fx-background-color: black;">
          <children>
-            <Hyperlink fx:id="hyperinicio" layoutX="444.0" layoutY="134.0" text="Inicio" textFill="WHITE">
+            <Hyperlink fx:id="hyperinicio" layoutX="444.0" layoutY="134.0" onAction="#AbrirtelaInicio" text="Inicio" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
@@ -96,17 +96,17 @@
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="hyperservico" layoutX="864.0" layoutY="128.0" text="Serviços" textFill="WHITE">
+            <Hyperlink fx:id="hyperservico" layoutX="864.0" layoutY="134.0" onAction="#AbrirTelaserviços" text="Serviços" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="hyperdestinos" layoutX="1091.0" layoutY="128.0" text="Destinos" textFill="WHITE">
+            <Hyperlink fx:id="hyperdestinos" layoutX="1091.0" layoutY="134.0" text="Destinos" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="hypercontato" layoutX="1310.0" layoutY="128.0" text="Contato" textFill="WHITE">
+            <Hyperlink fx:id="hypercontato" layoutX="1310.0" layoutY="134.0" onAction="#AbrirTelacontato" text="Contato" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>

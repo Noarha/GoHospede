@@ -1,34 +1,403 @@
-/* 1. Remove o fundo geral e a borda principal do DatePicker */
+/* Torna o fundo do DatePicker e de seus elementos internos totalmente transparentes */
 .date-picker {
     -fx-background-color: transparent;
-    -fx-background-insets: 0;
-    -fx-padding: 0;
+    -fx-border-color: white;       /* Cor da borda */
+    -fx-border-width: 1px;         /* Espessura da borda */
+    -fx-border-radius: 2px;        /* Opcional: arredonda os cantos da borda */
 }
 
-/* 2. Remove o fundo e a borda da caixa de texto interna */
+/* Torna o campo de texto interno transparente e remove sua borda padrão interna */
 .date-picker > .text-field {
     -fx-background-color: transparent;
-    -fx-background-insets: 0;
     -fx-border-color: transparent;
 }
 
-/* 3. Remove a parte cinzenta (fundo) e a borda do botão do calendário */
+/* Torna o botão do calendário interno transparente */
 .date-picker > .arrow-button {
     -fx-background-color: transparent;
-    -fx-background-insets: 0;
-    -fx-border-color: transparent;
 }
 
-/* 4. Remove efeitos de foco/hover padrão que costumam reativar bordas ou fundos */
-.date-picker:focused,
-.date-picker > .text-field:focused,
-.date-picker > .arrow-button:focused {
+/* Opcional: Deixa o ícone da setinha e o texto brancos para combinar com a borda */
+.date-picker > .arrow-button > .arrow {
+    -fx-background-color: white;
+}
+
+.date-picker > .text-field {
+    -fx-text-fill: white;
+}
+
+.spinner {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+/* Torna o campo de texto interno do Spinner transparente e com texto branco */
+.spinner > .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+/* Torna os botões de cima/baixo transparentes */
+.spinner > .increment-arrow-button,
+.spinner > .decrement-arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* Deixa as setinhas dos botões brancas */
+.spinner > .increment-arrow-button > .increment-arrow,
+.spinner > .decrement-arrow-button > .decrement-arrow {
+    -fx-background-color: white;
+}
+
+.combo-box {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+}
+
+.combo-box .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.6);
+}
+
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+}
+/* ==================================
+   COMBOBOX E DATEPICKER
+   ================================== */
+
+.combo-box,
+.date-picker {
+    -fx-background-color: rgba(0, 0, 0, 0.45);
+
+    -fx-border-color: #666666;
+    -fx-border-width: 1px;
+
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+
+    -fx-font-size: 14px;
+}
+
+
+/* =========================
+   DATE PICKER
+   ========================= */
+
+.date-picker > .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+
+    -fx-prompt-text-fill: #aaaaaa;
+
+    -fx-border-color: transparent;
+
+    -fx-faint-focus-color: transparent;
+    -fx-focus-color: transparent;
+}
+
+.date-picker > .arrow-button {
     -fx-background-color: transparent;
     -fx-border-color: transparent;
-    -fx-box-shadow: none;
 }
 
-/* Garante que o campo de texto interno e o calendário acompanhem o tamanho */
-.date-picker > .text-field {
-    -fx-font-size: 16px;
+.date-picker > .arrow-button > .arrow {
+    -fx-background-color: #d19a00;
+}
+
+.date-picker > .arrow-button:hover {
+    -fx-background-color: rgba(209, 154, 0, 0.15);
+}
+
+
+/* =========================
+   COMBO BOX
+   ========================= */
+
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #d19a00;
+}
+
+
+/* =========================
+   FOCO
+   ========================= */
+
+.combo-box:focused,
+.date-picker:focused {
+    -fx-border-color: #d19a00;
+
+    -fx-faint-focus-color: transparent;
+    -fx-focus-color: transparent;
+}
+
+
+/* =========================
+   LISTA DA COMBOBOX
+   ========================= */
+
+.combo-box-popup .list-view {
+    -fx-background-color: #171717;
+    -fx-border-color: #555555;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #171717;
+    -fx-text-fill: white;
+    -fx-padding: 8px;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #d19a00;
+    -fx-text-fill: black;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #d19a00;
+    -fx-text-fill: black;
+}
+
+
+/* =========================
+   CALENDÁRIO DATEPICKER
+   ========================= */
+
+.date-picker-popup {
+    -fx-background-color: #171717;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: #171717;
+}
+
+.date-picker-popup > .month-year-pane .label {
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .day-name-cell {
+    -fx-text-fill: #d19a00;
+}
+
+.date-picker-popup .day-cell {
+    -fx-background-color: #171717;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #d19a00;
+    -fx-text-fill: black;
+}
+
+.date-picker-popup .day-cell:selected {
+    -fx-background-color: #d19a00;
+    -fx-text-fill: black;
+}
+
+.date-picker-popup .today {
+    -fx-border-color: #d19a00;
+}
+/* =====================================
+   TABLEVIEW PRETO E DOURADO
+   ===================================== */
+
+.table-view {
+    -fx-background-color: #111111;
+    -fx-control-inner-background: #111111;
+    -fx-control-inner-background-alt: #111111;
+
+    -fx-border-color: #8a8a8a;
+    -fx-border-width: 1px;
+
+    -fx-table-cell-border-color: #5f5f5f;
+
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+
+/* =====================================
+   FUNDO INTERNO DA TABELA
+   ===================================== */
+
+.table-view .virtual-flow {
+    -fx-background-color: #111111;
+}
+
+.table-view .virtual-flow .clipped-container {
+    -fx-background-color: #111111;
+}
+
+.table-view .virtual-flow .sheet {
+    -fx-background-color: #111111;
+}
+
+
+/* =====================================
+   CABEÇALHO
+   ===================================== */
+
+.table-view .column-header-background {
+    -fx-background-color: #111111;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: #111111;
+}
+
+.table-view .column-header {
+    -fx-background-color: #111111;
+
+    -fx-border-color:
+        transparent
+        #666666
+        #666666
+        transparent;
+
+    -fx-border-width: 0 1px 1px 0;
+
+    -fx-pref-height: 35px;
+}
+
+
+/* Texto do cabeçalho */
+
+.table-view .column-header .label {
+    -fx-text-fill: #f0b400;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER;
+}
+
+
+/* =====================================
+   LINHAS
+   ===================================== */
+
+.table-row-cell {
+    -fx-background-color: #111111;
+    -fx-cell-size: 36px;
+
+    -fx-border-color: transparent;
+}
+
+
+/* =====================================
+   CÉLULAS
+   ===================================== */
+
+.table-cell {
+    -fx-background-color: #111111;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+
+    -fx-alignment: CENTER;
+
+    -fx-border-color:
+        transparent
+        #666666
+        #666666
+        transparent;
+
+    -fx-border-width: 0 1px 1px 0;
+}
+
+
+/* =====================================
+   PASSAR MOUSE
+   ===================================== */
+
+.table-row-cell:hover {
+    -fx-background-color: #2b2410;
+}
+
+.table-row-cell:hover .table-cell {
+    -fx-background-color: #2b2410;
+}
+
+
+/* =====================================
+   LINHA SELECIONADA
+   ===================================== */
+
+.table-row-cell:selected {
+    -fx-background-color: #f0b400;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-background-color: #f0b400;
+    -fx-text-fill: black;
+}
+
+
+/* =====================================
+   ÁREA VAZIA
+   ===================================== */
+
+.table-view .placeholder {
+    -fx-background-color: #111111;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #f0b400;
+}
+
+
+/* =====================================
+   SCROLLBAR
+   ===================================== */
+
+.table-view .scroll-bar {
+    -fx-background-color: #111111;
+}
+
+.table-view .scroll-bar .track {
+    -fx-background-color: #111111;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #666666;
+    -fx-background-radius: 3px;
+}
+
+.table-view .scroll-bar .thumb:hover {
+    -fx-background-color: #f0b400;
 }
