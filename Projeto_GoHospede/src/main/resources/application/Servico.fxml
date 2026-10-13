@@ -127,7 +127,7 @@
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="hyperdestinos" layoutX="1025.0" layoutY="134.0" text="Destinos" textFill="WHITE">
+            <Hyperlink fx:id="Hyperpagamento" layoutX="1025.0" layoutY="134.0" onAction="#Abrirpagamento" text="Pagamento" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>

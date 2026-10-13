@@ -10,11 +10,7 @@ public class Main extends Application {
     
     @Override
     public void start(Stage janela) throws Exception {
-<<<<<<< HEAD
-        Parent root = FXMLLoader.load(getClass().getResource("/application/pagamento.fxml"));
-=======
-        Parent root = FXMLLoader.load(getClass().getResource("/application/TelaInicio.fxml"));
->>>>>>> branch 'master' of https://github.com/Noarha/GoHospede.git
+        Parent root = FXMLLoader.load(getClass().getResource("/application/TelaLogin.fxml"));
         Scene cena = new Scene(root,1920,1080); 
         janela.setScene(cena);
         janela.setTitle("Tela Senac");

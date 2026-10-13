@@ -26,7 +26,7 @@
    <children>
       <AnchorPane fx:id="painelinicio" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
          <children>
-            <ImageView fx:id="imagemfundo" fitHeight="1080.0" fitWidth="1920.0" layoutX="-10.0" layoutY="-10.0">
+            <ImageView fx:id="imagemfundo" fitHeight="1080.0" fitWidth="1920.0" layoutX="-10.0" layoutY="-10.0" onMouseClicked="#AbrirSobrenos">
                <image>
                   <Image url="@../imagens/7e356422-74d2-40a8-8fe3-078390dc2c04.png" />
                </image>
@@ -36,12 +36,12 @@
                   <Font name="Cambria Bold" size="42.0" />
                </font>
             </Label>
-            <Label fx:id="txtviagem" layoutX="882.0" layoutY="252.0" prefHeight="44.0" prefWidth="388.0" text="PARA SUA VIAGEM" textFill="#d9a928">
+            <Label fx:id="txtviagem" layoutX="844.0" layoutY="252.0" prefHeight="44.0" prefWidth="388.0" text="PARA SUA VIAGEM" textFill="#d9a928">
                <font>
                   <Font name="Cambria Math" size="40.0" />
                </font>
             </Label>
-            <Label fx:id="txtreserve" layoutX="811.0" layoutY="295.0" prefHeight="28.0" prefWidth="455.0" text="Reserve hotéis com segurança, conforto e praticidade." textFill="WHITE">
+            <Label fx:id="txtreserve" layoutX="776.0" layoutY="295.0" prefHeight="28.0" prefWidth="523.0" text="Sua hospedagem com segurança, conforto e praticidade." textFill="WHITE">
                <font>
                   <Font size="19.0" />
                </font>
@@ -69,9 +69,9 @@
                   <ComboBox fx:id="combodestino" editable="true" layoutX="16.0" layoutY="43.0" prefHeight="33.0" prefWidth="200.0" promptText="Para onde você vai?" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-color: white;" styleClass="style.css" stylesheets="@../../../../../../GoHospedes/Projeto_GoHospede/src/main/resources/application/style.css" />
                </children>
             </Pane>
-            <ImageView fx:id="imgcoroa" fitHeight="113.0" fitWidth="107.0" layoutX="1006.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgcoroa" fitHeight="59.0" fitWidth="97.0" layoutX="1003.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../GoHospedes/Projeto_GoHospede/src/main/resources/imagens/coroa-removebg-preview.png" />
+                  <Image url="@../imagens/coroa-removebg-preview.png" />
                </image>
             </ImageView>
             <Line endX="100.0" layoutX="783.0" layoutY="596.0" opacity="0.4" startX="-33.0" stroke="#d9a928" strokeWidth="2.0">
@@ -79,7 +79,7 @@
                   <ColorAdjust brightness="-0.63" />
                </effect>
             </Line>
-            <Line endX="100.0" layoutX="925.0" layoutY="587.0" startX="7.0" strokeWidth="2.0">
+            <Line endX="100.0" layoutX="908.0" layoutY="587.0" startX="7.0" strokeWidth="2.0">
                <stroke>
                   <LinearGradient endX="0.20192307692307696" endY="0.3701923076923077" startX="1.0" startY="1.0">
                      <stops>
@@ -107,7 +107,7 @@
                   <ColorAdjust brightness="-0.63" />
                </effect>
             </Line>
-            <Line endX="123.0" layoutX="1069.0" layoutY="588.0" startX="32.0" strokeWidth="2.0">
+            <Line endX="123.0" layoutX="1063.0" layoutY="588.0" startX="32.0" strokeWidth="2.0">
                <stroke>
                   <LinearGradient endX="0.8221153846153846" endY="0.4423076923076923" startX="0.3076923076923077" startY="1.0">
                      <stops>
@@ -130,7 +130,7 @@
                   </LinearGradient>
                </stroke>
             </Line>
-            <Label layoutX="977.0" layoutY="602.0" text="DESTINOS POPULARES" textFill="WHITE" />
+            <Label layoutX="991.0" layoutY="605.0" text="DESTINOS POPULARES" textFill="WHITE" />
             <Line endX="100.0" layoutX="717.0" layoutY="620.0" opacity="0.4" startX="5.0" stroke="#d9a928" strokeWidth="2.0">
                <effect>
                   <ColorAdjust brightness="-0.63" />
@@ -182,7 +182,7 @@
                   </LinearGradient>
                </stroke>
             </Line>
-            <Line endX="100.0" layoutX="1140.0" layoutY="613.0" opacity="0.4" startX="5.0" stroke="#d9a928" strokeWidth="2.0">
+            <Line endX="86.0" layoutX="1135.0" layoutY="613.0" opacity="0.4" startX="5.0" stroke="#d9a928" strokeWidth="2.0">
                <effect>
                   <ColorAdjust brightness="-0.63" />
                </effect>
@@ -418,29 +418,29 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label fx:id="lblmenuinicio" layoutX="754.0" layoutY="54.0" onMouseClicked="#telainicio" styleClass="label-clicavel" text="INÍCIO" textFill="WHITE">
+            <Label fx:id="lblmenuinicio" layoutX="429.0" layoutY="29.0" onMouseClicked="#telainicio" styleClass="label-clicavel" text="INÍCIO" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="923.0" layoutY="53.0" text="SOBRE NÓS" textFill="WHITE">
+            <Label fx:id="lblSobrenós" layoutX="710.0" layoutY="29.0" text="SOBRE NÓS" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="1097.0" layoutY="54.0" text="SERVIÇOS" textFill="WHITE">
+            <Label fx:id="lblserviços" layoutX="1022.0" layoutY="29.0" onMouseClicked="#AbrirServiços" text="SERVIÇOS" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="lblmenudestinos" layoutX="1272.0" layoutY="54.0" onMouseClicked="#teladestinos" text="DESTINOS" textFill="WHITE">
+            <Label fx:id="lblpagamento" layoutX="1280.0" layoutY="29.0" onMouseClicked="#abrirpagamento" text="PAGAMENTO" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="1453.0" layoutY="54.0" text="CONTATO" textFill="WHITE">
+            <Label layoutX="1610.0" layoutY="29.0" text="CONTATO" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Label>
          </children>

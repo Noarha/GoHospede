@@ -21,7 +21,7 @@ public class SobrenosTela_Controle {
     private Hyperlink hypercontato;
 
     @FXML
-    private Hyperlink hyperdestinos;
+    private Hyperlink Hyperpagamento;
 
     @FXML
     private Hyperlink hyperinicio;
@@ -170,8 +170,21 @@ public class SobrenosTela_Controle {
         e.printStackTrace();
 
     }
-}
+    }
+	
+    @FXML
+    void AbrirPagamento(ActionEvent event) {
+    	try {
+            Parent root = FXMLLoader.load(getClass().getResource("/application/pagamento.fxml"));
+            Stage stage = (Stage) hiperLogin.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+    
+        }
 
+    }
 }
 
 

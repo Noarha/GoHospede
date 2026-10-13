@@ -91,7 +91,7 @@
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="hypersobrenos" layoutX="454.0" layoutY="134.0" text="Sobre nós" textFill="WHITE">
+            <Hyperlink fx:id="hypersobrenos" layoutX="454.0" layoutY="134.0" onMouseClicked="#Abrirsobrenos" text="Sobre nós" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
@@ -101,7 +101,7 @@
                   <Font size="35.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="hyperdestinos" layoutX="1029.0" layoutY="134.0" text="Destinos" textFill="WHITE">
+            <Hyperlink fx:id="Hyperpagamento" layoutX="1029.0" layoutY="134.0" onAction="#AbrirPagamento" text="Pagamento" textFill="WHITE">
                <font>
                   <Font size="35.0" />
                </font>
