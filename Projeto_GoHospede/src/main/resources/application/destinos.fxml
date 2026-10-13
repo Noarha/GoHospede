@@ -38,7 +38,7 @@
                            <children>
                               <HBox prefHeight="172.0" prefWidth="672.0">
                                  <children>
-                                    <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="177.0" fitWidth="430.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../imagens/ChatGPT%20Image%2010_09_2026,%2020_04_36.png" />
                                        </image>
@@ -62,7 +62,7 @@
                               <Line endX="564.2929077148438" endY="4.655122756958008E-5" startX="-100.0" stroke="#ffc000" />
                               <HBox prefHeight="172.0" prefWidth="672.0">
                                  <children>
-                                    <ImageView fitHeight="177.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="179.0" fitWidth="352.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../imagens/ChatGPT%20Image%2010_09_2026,%2020_07_38.png" />
                                        </image>
@@ -86,9 +86,9 @@
                               <Line endX="749.2929077148438" endY="151.8223114013672" startX="25.050247192382812" startY="151.82220458984375" stroke="#ffc000" />
                               <HBox prefHeight="214.0" prefWidth="608.0">
                                  <children>
-                                    <ImageView fitHeight="182.0" fitWidth="354.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="202.0" fitWidth="353.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../imagens/bd4ce57d-d945-4000-a4ed-5a89be34753e.png" />
+                                          <Image url="@../imagens/Imagem%20ChatGPT%2029_09_2026,%2018_24_40.png" />
                                        </image>
                                     </ImageView>
                                     <VBox prefHeight="214.0" prefWidth="271.0">
